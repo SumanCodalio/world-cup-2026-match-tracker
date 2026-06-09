@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_06_09_191006) do
+ActiveRecord::Schema[8.0].define(version: 2026_06_09_191230) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -73,6 +73,26 @@ ActiveRecord::Schema[8.0].define(version: 2026_06_09_191006) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "articles", force: :cascade do |t|
+    t.bigint "organization_id", null: false
+    t.string "title", null: false
+    t.text "content", null: false
+    t.datetime "published_at"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["organization_id"], name: "index_articles_on_organization_id"
+  end
+
+  create_table "favorite_teams", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "team_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["team_id"], name: "index_favorite_teams_on_team_id"
+    t.index ["user_id"], name: "index_favorite_teams_on_user_id"
+  end
+
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
     t.integer "sluggable_id", null: false
@@ -83,6 +103,40 @@ ActiveRecord::Schema[8.0].define(version: 2026_06_09_191006) do
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+  end
+
+  create_table "match_probabilities", force: :cascade do |t|
+    t.bigint "match_id", null: false
+    t.bigint "prediction_model_id", null: false
+    t.float "home_win_prob", null: false
+    t.float "away_win_prob", null: false
+    t.float "draw_prob", null: false
+    t.text "factors_summary"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["match_id"], name: "index_match_probabilities_on_match_id"
+    t.index ["prediction_model_id"], name: "index_match_probabilities_on_prediction_model_id"
+  end
+
+  create_table "match_teams", force: :cascade do |t|
+    t.bigint "match_id", null: false
+    t.bigint "team_id", null: false
+    t.boolean "is_home", default: false, null: false
+    t.integer "score", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["match_id"], name: "index_match_teams_on_match_id"
+    t.index ["team_id"], name: "index_match_teams_on_team_id"
+  end
+
+  create_table "matches", force: :cascade do |t|
+    t.bigint "venue_id", null: false
+    t.datetime "kickoff_time", null: false
+    t.string "stage", null: false
+    t.string "status", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["venue_id"], name: "index_matches_on_venue_id"
   end
 
   create_table "notifications", force: :cascade do |t|
@@ -111,6 +165,27 @@ ActiveRecord::Schema[8.0].define(version: 2026_06_09_191006) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "players", force: :cascade do |t|
+    t.bigint "team_id", null: false
+    t.string "name", null: false
+    t.string "position", null: false
+    t.integer "jersey_number", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["team_id"], name: "index_players_on_team_id"
+  end
+
+  create_table "prediction_models", force: :cascade do |t|
+    t.bigint "organization_id", null: false
+    t.string "name", null: false
+    t.string "version", null: false
+    t.boolean "is_active", default: true, null: false
+    t.float "hit_rate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["organization_id"], name: "index_prediction_models_on_organization_id"
   end
 
   create_table "roles", force: :cascade do |t|
@@ -279,6 +354,48 @@ ActiveRecord::Schema[8.0].define(version: 2026_06_09_191006) do
     t.index ["target_type", "target_id"], name: "index_subscriptions_on_target"
   end
 
+  create_table "system_configurations", force: :cascade do |t|
+    t.bigint "organization_id", null: false
+    t.string "setting_key", null: false
+    t.string "setting_value", null: false
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["organization_id"], name: "index_system_configurations_on_organization_id"
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.bigint "organization_id", null: false
+    t.string "name", null: false
+    t.string "group_name", null: false
+    t.string "flag_url"
+    t.string "status", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["organization_id"], name: "index_teams_on_organization_id"
+  end
+
+  create_table "tournament_predictions", force: :cascade do |t|
+    t.bigint "team_id", null: false
+    t.string "prediction_type", null: false
+    t.float "probability", null: false
+    t.text "rationale"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["team_id"], name: "index_tournament_predictions_on_team_id"
+  end
+
+  create_table "user_preferences", force: :cascade do |t|
+    t.bigint "organization_id", null: false
+    t.bigint "user_id", null: false
+    t.string "timezone", null: false
+    t.boolean "receive_notifications", default: true, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["organization_id"], name: "index_user_preferences_on_organization_id"
+    t.index ["user_id"], name: "index_user_preferences_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "provider", default: "email", null: false
     t.string "uid", default: "", null: false
@@ -339,17 +456,44 @@ ActiveRecord::Schema[8.0].define(version: 2026_06_09_191006) do
     t.index ["user_id"], name: "index_users_roles_on_user_id"
   end
 
+  create_table "venues", force: :cascade do |t|
+    t.bigint "organization_id", null: false
+    t.string "name", null: false
+    t.string "city", null: false
+    t.integer "capacity", null: false
+    t.string "timezone", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["organization_id"], name: "index_venues_on_organization_id"
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "articles", "organizations"
+  add_foreign_key "favorite_teams", "teams"
+  add_foreign_key "favorite_teams", "users"
+  add_foreign_key "match_probabilities", "matches"
+  add_foreign_key "match_probabilities", "prediction_models"
+  add_foreign_key "match_teams", "matches"
+  add_foreign_key "match_teams", "teams"
+  add_foreign_key "matches", "venues"
+  add_foreign_key "players", "teams"
+  add_foreign_key "prediction_models", "organizations"
   add_foreign_key "solid_queue_blocked_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
   add_foreign_key "solid_queue_claimed_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
   add_foreign_key "solid_queue_failed_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
   add_foreign_key "solid_queue_ready_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
   add_foreign_key "solid_queue_recurring_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
   add_foreign_key "solid_queue_scheduled_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
+  add_foreign_key "system_configurations", "organizations"
+  add_foreign_key "teams", "organizations"
+  add_foreign_key "tournament_predictions", "teams"
+  add_foreign_key "user_preferences", "organizations"
+  add_foreign_key "user_preferences", "users"
   add_foreign_key "users_role_invites", "organizations"
   add_foreign_key "users_role_invites", "roles"
   add_foreign_key "users_roles", "organizations"
   add_foreign_key "users_roles", "roles"
   add_foreign_key "users_roles", "users"
+  add_foreign_key "venues", "organizations"
 end
