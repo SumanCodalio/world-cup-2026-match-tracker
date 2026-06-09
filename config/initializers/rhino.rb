@@ -21,5 +21,17 @@ Rhino.setup do |config|
 
   # The list of resources exposed in the API
   config.resources += [ "User", "Account" ]
-  config.resources += ["Organization", "UsersRole", "Role", "UsersRoleInvite"]
+  config.resources += [ "Organization", "UsersRole", "Role", "UsersRoleInvite" ]
+  config.resources += [ "Team" ]
+  config.resources += [ "Venue" ]
+  config.resources += [ "Match" ]
+  config.resources += [ "MatchTeam" ]
+  config.resources += [ "PredictionModel" ]
+  config.resources += [ "MatchProbability" ]
+  config.resources += [ "TournamentPrediction" ]
+  config.resources += [ "Player" ]
+  config.resources += [ "Article" ]
+  config.resources += [ "FavoriteTeam" ]
+  config.resources += [ "UserPreference" ]
+  config.resources += [ "SystemConfiguration" ]
 end
