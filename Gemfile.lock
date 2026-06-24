@@ -129,7 +129,7 @@ GEM
     commonmarker (2.0.4-arm64-darwin)
     commonmarker (2.0.4-x86_64-darwin)
     commonmarker (2.0.4-x86_64-linux)
-    concurrent-ruby (1.3.5)
+    concurrent-ruby (1.3.7)
     connection_pool (2.5.0)
     countries (6.0.0)
       unaccent (~> 0.3)
@@ -730,7 +730,7 @@ CHECKSUMS
   commonmarker (2.0.4-arm64-darwin) sha256=39ecc81b246dbd24d6aaf83288581a364f142244d3963d10dd984e33b09d9dec
   commonmarker (2.0.4-x86_64-darwin) sha256=455782dfc9af1ca92ec84ac8ac3b685b6f3d1d0ef8f0c9290070b7976e3f4acc
   commonmarker (2.0.4-x86_64-linux) sha256=34043c15857f0ef45f3f55ff9b0a5ee8fac395682c373ab39275c4a2a0a03400
-  concurrent-ruby (1.3.5) sha256=813b3e37aca6df2a21a3b9f1d497f8cbab24a2b94cab325bffe65ee0f6cbebc6
+  concurrent-ruby (1.3.7) sha256=4412caec3a5ea2e5fdc52076724c071a81f2c0593d83b2ac8cbb8ca63b3151b0
   connection_pool (2.5.0) sha256=233b92f8d38e038c1349ccea65dd3772727d669d6d2e71f9897c8bf5cd53ebfc
   countries (6.0.0) sha256=6e88d03070d6e254d44ef36880f377afddda394ad7417f8f142c35b0d8db845e
   crack (1.0.0) sha256=c83aefdb428cdc7b66c7f287e488c796f055c0839e6e545fec2c7047743c4a49
