@@ -1,10 +1,11 @@
 DeviseTokenAuth.setup do |config|
   config.cookie_enabled = true
+  disable_ssl = ActiveModel::Type::Boolean.new.cast(ENV.fetch("DISABLE_SSL", Rails.env.development? || Rails.env.test?))
   config.cookie_attributes = {
-    secure: ENV.fetch("DISABLE_SSL", false) ? false : true,
+    secure: !disable_ssl,
     httponly: true,
     expires: 1.day,
-    same_site: ENV.fetch("DISABLE_SSL", false) ? "Lax" : "None"
+    same_site: disable_ssl ? "Lax" : "None"
     # WARNING: the :domain attribute specifies to whom the cookie will be sent to.
     # It's recommended to leave it empty, so it acts in the most restrictive way as per
     # https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#domain-and-path-attributes

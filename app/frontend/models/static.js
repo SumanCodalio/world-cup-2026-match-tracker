@@ -830,6 +830,30 @@ const api = {
                 "$ref": "#/components/schemas/organization"
               }
             ]
+          },
+          "players": {
+            "x-rhino-attribute": {
+              "name": "players",
+              "readableName": "Players",
+              "readable": true,
+              "creatable": true,
+              "updatable": true
+            },
+            "nullable": true,
+            "type": "array",
+            "items": {
+              "type": "reference",
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/player"
+                }
+              ],
+              "x-rhino-attribute-array": {
+                "creatable": true,
+                "updatable": true,
+                "destroyable": true
+              }
+            }
           }
         },
         "required": [
@@ -1581,7 +1605,7 @@ const api = {
           "pluralName": "players",
           "readableName": "Player",
           "pluralReadableName": "Players",
-          "ownedBy": "team",
+          "ownedBy": "organization",
           "singular": false,
           "path": "/api/players",
           "searchable": false
@@ -1631,7 +1655,7 @@ const api = {
               "creatable": true,
               "updatable": true
             },
-            "nullable": false,
+            "nullable": true,
             "type": "integer"
           },
           "created_at": {
@@ -1660,6 +1684,55 @@ const api = {
             "type": "string",
             "format": "datetime"
           },
+          "surname": {
+            "x-rhino-attribute": {
+              "name": "surname",
+              "readableName": "Surname",
+              "readable": true,
+              "creatable": true,
+              "updatable": true
+            },
+            "nullable": true,
+            "type": "string"
+          },
+          "nationality": {
+            "x-rhino-attribute": {
+              "name": "nationality",
+              "readableName": "Nationality",
+              "readable": true,
+              "creatable": true,
+              "updatable": true
+            },
+            "nullable": true,
+            "type": "string"
+          },
+          "club": {
+            "x-rhino-attribute": {
+              "name": "club",
+              "readableName": "Club",
+              "readable": true,
+              "creatable": true,
+              "updatable": true
+            },
+            "nullable": true,
+            "type": "string"
+          },
+          "organization": {
+            "x-rhino-attribute": {
+              "name": "organization",
+              "readableName": "Organization",
+              "readable": true,
+              "creatable": true,
+              "updatable": true
+            },
+            "nullable": true,
+            "type": "reference",
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/organization"
+              }
+            ]
+          },
           "team": {
             "x-rhino-attribute": {
               "name": "team",
@@ -1668,7 +1741,7 @@ const api = {
               "creatable": true,
               "updatable": true
             },
-            "nullable": false,
+            "nullable": true,
             "type": "reference",
             "anyOf": [
               {
@@ -1679,9 +1752,7 @@ const api = {
         },
         "required": [
           "name",
-          "position",
-          "jersey_number",
-          "team"
+          "position"
         ]
       },
       "article": {

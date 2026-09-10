@@ -10,418 +10,841 @@
 
 import { createFileRoute } from '@tanstack/react-router';
 
-// Import Routes
+import { Route as rootRouteImport } from './routes/__root';
+import { Route as AuthRouteImport } from './routes/auth';
+import { Route as PrototypeRouteImport } from './routes/_prototype';
+import { Route as AuthenticatedRouteImport } from './routes/_authenticated';
+import { Route as PrototypeIndexRouteImport } from './routes/_prototype/index';
+import { Route as AuthSignupRouteImport } from './routes/auth/signup';
+import { Route as AuthSigninRouteImport } from './routes/auth/signin';
+import { Route as AuthResetPasswordRouteImport } from './routes/auth/reset-password';
+import { Route as AuthenticatedOwnerRouteImport } from './routes/_authenticated/$owner';
+import { Route as PrototypeUserIndexRouteImport } from './routes/_prototype/user/index';
+import { Route as PrototypeTeamsIndexRouteImport } from './routes/_prototype/teams/index';
+import { Route as PrototypeScheduleIndexRouteImport } from './routes/_prototype/schedule/index';
+import { Route as PrototypeProbabilitiesIndexRouteImport } from './routes/_prototype/probabilities/index';
+import { Route as PrototypePlayersIndexRouteImport } from './routes/_prototype/players/index';
+import { Route as PrototypeAdminIndexRouteImport } from './routes/_prototype/admin/index';
+import { Route as AuthenticatedOwnerIndexRouteImport } from './routes/_authenticated/$owner/index';
+import { Route as PrototypeUserSettingsRouteImport } from './routes/_prototype/user/settings';
+import { Route as PrototypeUserProfileRouteImport } from './routes/_prototype/user/profile';
+import { Route as PrototypeUserDashboardRouteImport } from './routes/_prototype/user/dashboard';
+import { Route as PrototypePlayersNewRouteImport } from './routes/_prototype/players/new';
+import { Route as PrototypeAdminUsersRouteImport } from './routes/_prototype/admin/users';
+import { Route as PrototypeAdminMatchesRouteImport } from './routes/_prototype/admin/matches';
+import { Route as PrototypeAdminDashboardRouteImport } from './routes/_prototype/admin/dashboard';
+import { Route as PrototypeAdminContentRouteImport } from './routes/_prototype/admin/content';
+import { Route as AuthenticatedOwnerSettingsRouteImport } from './routes/_authenticated/$owner/settings';
+import { Route as AuthenticatedOwnerModelRouteImport } from './routes/_authenticated/$owner/$model';
+import { Route as AuthenticatedOwnerSettingsIndexRouteImport } from './routes/_authenticated/$owner/settings/index';
+import { Route as AuthenticatedOwnerModelIndexRouteImport } from './routes/_authenticated/$owner/$model/index';
+import { Route as PrototypePlayersPlayerIdEditRouteImport } from './routes/_prototype/players/$playerId.edit';
+import { Route as AuthenticatedOwnerSettingsSubscriptionRouteImport } from './routes/_authenticated/$owner/settings/subscription';
+import { Route as AuthenticatedOwnerSettingsAccessRouteImport } from './routes/_authenticated/$owner/settings/access';
+import { Route as AuthenticatedOwnerAccountSettingsRouteImport } from './routes/_authenticated/$owner/account/settings';
+import { Route as AuthenticatedOwnerModelNewRouteImport } from './routes/_authenticated/$owner/$model/new';
+import { Route as AuthenticatedOwnerAccountSettingsIndexRouteImport } from './routes/_authenticated/$owner/account/settings/index';
+import { Route as AuthenticatedOwnerModelIdIndexRouteImport } from './routes/_authenticated/$owner/$model/$id.index';
+import { Route as AuthenticatedOwnerAccountSettingsPasswordRouteImport } from './routes/_authenticated/$owner/account/settings/password';
+import { Route as AuthenticatedOwnerModelIdEditRouteImport } from './routes/_authenticated/$owner/$model/$id.edit';
 
-import { Route as rootRoute } from './routes/__root';
-import { Route as AuthImport } from './routes/auth';
-import { Route as AuthenticatedImport } from './routes/_authenticated';
-import { Route as AuthenticatedIndexImport } from './routes/_authenticated/index';
-import { Route as AuthSignupImport } from './routes/auth/signup';
-import { Route as AuthSigninImport } from './routes/auth/signin';
-import { Route as AuthResetPasswordImport } from './routes/auth/reset-password';
-import { Route as AuthenticatedOwnerImport } from './routes/_authenticated/$owner';
-import { Route as AuthenticatedOwnerIndexImport } from './routes/_authenticated/$owner/index';
-import { Route as AuthenticatedOwnerSettingsImport } from './routes/_authenticated/$owner/settings';
-import { Route as AuthenticatedOwnerModelImport } from './routes/_authenticated/$owner/$model';
-import { Route as AuthenticatedOwnerSettingsIndexImport } from './routes/_authenticated/$owner/settings/index';
-import { Route as AuthenticatedOwnerModelIndexImport } from './routes/_authenticated/$owner/$model/index';
-import { Route as AuthenticatedOwnerSettingsSubscriptionImport } from './routes/_authenticated/$owner/settings/subscription';
-import { Route as AuthenticatedOwnerSettingsAccessImport } from './routes/_authenticated/$owner/settings/access';
-import { Route as AuthenticatedOwnerAccountSettingsImport } from './routes/_authenticated/$owner/account/settings';
-import { Route as AuthenticatedOwnerModelNewImport } from './routes/_authenticated/$owner/$model/new';
-import { Route as AuthenticatedOwnerAccountSettingsIndexImport } from './routes/_authenticated/$owner/account/settings/index';
-import { Route as AuthenticatedOwnerModelIdIndexImport } from './routes/_authenticated/$owner/$model/$id.index';
-import { Route as AuthenticatedOwnerAccountSettingsPasswordImport } from './routes/_authenticated/$owner/account/settings/password';
-import { Route as AuthenticatedOwnerModelIdEditImport } from './routes/_authenticated/$owner/$model/$id.edit';
-
-// Create Virtual Routes
-
-const AuthenticatedOwnerDesignLazyImport = createFileRoute(
-  '/_authenticated/$owner/design'
+const AuthenticatedOwnerDesignLazyRouteImport = createFileRoute(
+  '/_authenticated/$owner/design',
 )();
-const AuthenticatedOwnerDesignIndexLazyImport = createFileRoute(
-  '/_authenticated/$owner/design/'
+const AuthenticatedOwnerDesignIndexLazyRouteImport = createFileRoute(
+  '/_authenticated/$owner/design/',
 )();
-const AuthenticatedOwnerDesignTypographyLazyImport = createFileRoute(
-  '/_authenticated/$owner/design/typography'
+const AuthenticatedOwnerDesignTypographyLazyRouteImport = createFileRoute(
+  '/_authenticated/$owner/design/typography',
 )();
-const AuthenticatedOwnerDesignTablesLazyImport = createFileRoute(
-  '/_authenticated/$owner/design/tables'
+const AuthenticatedOwnerDesignTablesLazyRouteImport = createFileRoute(
+  '/_authenticated/$owner/design/tables',
 )();
-const AuthenticatedOwnerDesignFormsLazyImport = createFileRoute(
-  '/_authenticated/$owner/design/forms'
+const AuthenticatedOwnerDesignFormsLazyRouteImport = createFileRoute(
+  '/_authenticated/$owner/design/forms',
 )();
 
-// Create/Update Routes
-
-const AuthRoute = AuthImport.update({
+const AuthRoute = AuthRouteImport.update({
   id: '/auth',
   path: '/auth',
-  getParentRoute: () => rootRoute
+  getParentRoute: () => rootRouteImport,
 } as any);
-
-const AuthenticatedRoute = AuthenticatedImport.update({
+const PrototypeRoute = PrototypeRouteImport.update({
+  id: '/_prototype',
+  getParentRoute: () => rootRouteImport,
+} as any);
+const AuthenticatedRoute = AuthenticatedRouteImport.update({
   id: '/_authenticated',
-  getParentRoute: () => rootRoute
+  getParentRoute: () => rootRouteImport,
 } as any);
-
-const AuthenticatedIndexRoute = AuthenticatedIndexImport.update({
+const PrototypeIndexRoute = PrototypeIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => AuthenticatedRoute
+  getParentRoute: () => PrototypeRoute,
 } as any);
-
-const AuthSignupRoute = AuthSignupImport.update({
+const AuthSignupRoute = AuthSignupRouteImport.update({
   id: '/signup',
   path: '/signup',
-  getParentRoute: () => AuthRoute
+  getParentRoute: () => AuthRoute,
 } as any);
-
-const AuthSigninRoute = AuthSigninImport.update({
+const AuthSigninRoute = AuthSigninRouteImport.update({
   id: '/signin',
   path: '/signin',
-  getParentRoute: () => AuthRoute
+  getParentRoute: () => AuthRoute,
 } as any);
-
-const AuthResetPasswordRoute = AuthResetPasswordImport.update({
+const AuthResetPasswordRoute = AuthResetPasswordRouteImport.update({
   id: '/reset-password',
   path: '/reset-password',
-  getParentRoute: () => AuthRoute
+  getParentRoute: () => AuthRoute,
 } as any);
-
-const AuthenticatedOwnerRoute = AuthenticatedOwnerImport.update({
+const AuthenticatedOwnerRoute = AuthenticatedOwnerRouteImport.update({
   id: '/$owner',
   path: '/$owner',
-  getParentRoute: () => AuthenticatedRoute
+  getParentRoute: () => AuthenticatedRoute,
 } as any);
-
-const AuthenticatedOwnerIndexRoute = AuthenticatedOwnerIndexImport.update({
+const PrototypeUserIndexRoute = PrototypeUserIndexRouteImport.update({
+  id: '/user/',
+  path: '/user/',
+  getParentRoute: () => PrototypeRoute,
+} as any);
+const PrototypeTeamsIndexRoute = PrototypeTeamsIndexRouteImport.update({
+  id: '/teams/',
+  path: '/teams/',
+  getParentRoute: () => PrototypeRoute,
+} as any);
+const PrototypeScheduleIndexRoute = PrototypeScheduleIndexRouteImport.update({
+  id: '/schedule/',
+  path: '/schedule/',
+  getParentRoute: () => PrototypeRoute,
+} as any);
+const PrototypeProbabilitiesIndexRoute =
+  PrototypeProbabilitiesIndexRouteImport.update({
+    id: '/probabilities/',
+    path: '/probabilities/',
+    getParentRoute: () => PrototypeRoute,
+  } as any);
+const PrototypePlayersIndexRoute = PrototypePlayersIndexRouteImport.update({
+  id: '/players/',
+  path: '/players/',
+  getParentRoute: () => PrototypeRoute,
+} as any);
+const PrototypeAdminIndexRoute = PrototypeAdminIndexRouteImport.update({
+  id: '/admin/',
+  path: '/admin/',
+  getParentRoute: () => PrototypeRoute,
+} as any);
+const AuthenticatedOwnerIndexRoute = AuthenticatedOwnerIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => AuthenticatedOwnerRoute
+  getParentRoute: () => AuthenticatedOwnerRoute,
 } as any);
-
 const AuthenticatedOwnerDesignLazyRoute =
-  AuthenticatedOwnerDesignLazyImport.update({
+  AuthenticatedOwnerDesignLazyRouteImport.update({
     id: '/design',
     path: '/design',
-    getParentRoute: () => AuthenticatedOwnerRoute
+    getParentRoute: () => AuthenticatedOwnerRoute,
   } as any).lazy(() =>
-    import('./routes/_authenticated/$owner/design.lazy').then((d) => d.Route)
+    import('./routes/_authenticated/$owner/design.lazy').then((d) => d.Route),
   );
-
-const AuthenticatedOwnerSettingsRoute = AuthenticatedOwnerSettingsImport.update(
-  {
+const PrototypeUserSettingsRoute = PrototypeUserSettingsRouteImport.update({
+  id: '/user/settings',
+  path: '/user/settings',
+  getParentRoute: () => PrototypeRoute,
+} as any);
+const PrototypeUserProfileRoute = PrototypeUserProfileRouteImport.update({
+  id: '/user/profile',
+  path: '/user/profile',
+  getParentRoute: () => PrototypeRoute,
+} as any);
+const PrototypeUserDashboardRoute = PrototypeUserDashboardRouteImport.update({
+  id: '/user/dashboard',
+  path: '/user/dashboard',
+  getParentRoute: () => PrototypeRoute,
+} as any);
+const PrototypePlayersNewRoute = PrototypePlayersNewRouteImport.update({
+  id: '/players/new',
+  path: '/players/new',
+  getParentRoute: () => PrototypeRoute,
+} as any);
+const PrototypeAdminUsersRoute = PrototypeAdminUsersRouteImport.update({
+  id: '/admin/users',
+  path: '/admin/users',
+  getParentRoute: () => PrototypeRoute,
+} as any);
+const PrototypeAdminMatchesRoute = PrototypeAdminMatchesRouteImport.update({
+  id: '/admin/matches',
+  path: '/admin/matches',
+  getParentRoute: () => PrototypeRoute,
+} as any);
+const PrototypeAdminDashboardRoute = PrototypeAdminDashboardRouteImport.update({
+  id: '/admin/dashboard',
+  path: '/admin/dashboard',
+  getParentRoute: () => PrototypeRoute,
+} as any);
+const PrototypeAdminContentRoute = PrototypeAdminContentRouteImport.update({
+  id: '/admin/content',
+  path: '/admin/content',
+  getParentRoute: () => PrototypeRoute,
+} as any);
+const AuthenticatedOwnerSettingsRoute =
+  AuthenticatedOwnerSettingsRouteImport.update({
     id: '/settings',
     path: '/settings',
-    getParentRoute: () => AuthenticatedOwnerRoute
-  } as any
-);
-
-const AuthenticatedOwnerModelRoute = AuthenticatedOwnerModelImport.update({
+    getParentRoute: () => AuthenticatedOwnerRoute,
+  } as any);
+const AuthenticatedOwnerModelRoute = AuthenticatedOwnerModelRouteImport.update({
   id: '/$model',
   path: '/$model',
-  getParentRoute: () => AuthenticatedOwnerRoute
+  getParentRoute: () => AuthenticatedOwnerRoute,
 } as any);
-
 const AuthenticatedOwnerDesignIndexLazyRoute =
-  AuthenticatedOwnerDesignIndexLazyImport.update({
+  AuthenticatedOwnerDesignIndexLazyRouteImport.update({
     id: '/',
     path: '/',
-    getParentRoute: () => AuthenticatedOwnerDesignLazyRoute
+    getParentRoute: () => AuthenticatedOwnerDesignLazyRoute,
   } as any).lazy(() =>
     import('./routes/_authenticated/$owner/design/index.lazy').then(
-      (d) => d.Route
-    )
+      (d) => d.Route,
+    ),
   );
-
 const AuthenticatedOwnerSettingsIndexRoute =
-  AuthenticatedOwnerSettingsIndexImport.update({
+  AuthenticatedOwnerSettingsIndexRouteImport.update({
     id: '/',
     path: '/',
-    getParentRoute: () => AuthenticatedOwnerSettingsRoute
+    getParentRoute: () => AuthenticatedOwnerSettingsRoute,
   } as any);
-
 const AuthenticatedOwnerModelIndexRoute =
-  AuthenticatedOwnerModelIndexImport.update({
+  AuthenticatedOwnerModelIndexRouteImport.update({
     id: '/',
     path: '/',
-    getParentRoute: () => AuthenticatedOwnerModelRoute
+    getParentRoute: () => AuthenticatedOwnerModelRoute,
   } as any);
-
 const AuthenticatedOwnerDesignTypographyLazyRoute =
-  AuthenticatedOwnerDesignTypographyLazyImport.update({
+  AuthenticatedOwnerDesignTypographyLazyRouteImport.update({
     id: '/typography',
     path: '/typography',
-    getParentRoute: () => AuthenticatedOwnerDesignLazyRoute
+    getParentRoute: () => AuthenticatedOwnerDesignLazyRoute,
   } as any).lazy(() =>
     import('./routes/_authenticated/$owner/design/typography.lazy').then(
-      (d) => d.Route
-    )
+      (d) => d.Route,
+    ),
   );
-
 const AuthenticatedOwnerDesignTablesLazyRoute =
-  AuthenticatedOwnerDesignTablesLazyImport.update({
+  AuthenticatedOwnerDesignTablesLazyRouteImport.update({
     id: '/tables',
     path: '/tables',
-    getParentRoute: () => AuthenticatedOwnerDesignLazyRoute
+    getParentRoute: () => AuthenticatedOwnerDesignLazyRoute,
   } as any).lazy(() =>
     import('./routes/_authenticated/$owner/design/tables.lazy').then(
-      (d) => d.Route
-    )
+      (d) => d.Route,
+    ),
   );
-
 const AuthenticatedOwnerDesignFormsLazyRoute =
-  AuthenticatedOwnerDesignFormsLazyImport.update({
+  AuthenticatedOwnerDesignFormsLazyRouteImport.update({
     id: '/forms',
     path: '/forms',
-    getParentRoute: () => AuthenticatedOwnerDesignLazyRoute
+    getParentRoute: () => AuthenticatedOwnerDesignLazyRoute,
   } as any).lazy(() =>
     import('./routes/_authenticated/$owner/design/forms.lazy').then(
-      (d) => d.Route
-    )
+      (d) => d.Route,
+    ),
   );
-
+const PrototypePlayersPlayerIdEditRoute =
+  PrototypePlayersPlayerIdEditRouteImport.update({
+    id: '/players/$playerId/edit',
+    path: '/players/$playerId/edit',
+    getParentRoute: () => PrototypeRoute,
+  } as any);
 const AuthenticatedOwnerSettingsSubscriptionRoute =
-  AuthenticatedOwnerSettingsSubscriptionImport.update({
+  AuthenticatedOwnerSettingsSubscriptionRouteImport.update({
     id: '/subscription',
     path: '/subscription',
-    getParentRoute: () => AuthenticatedOwnerSettingsRoute
+    getParentRoute: () => AuthenticatedOwnerSettingsRoute,
   } as any);
-
 const AuthenticatedOwnerSettingsAccessRoute =
-  AuthenticatedOwnerSettingsAccessImport.update({
+  AuthenticatedOwnerSettingsAccessRouteImport.update({
     id: '/access',
     path: '/access',
-    getParentRoute: () => AuthenticatedOwnerSettingsRoute
+    getParentRoute: () => AuthenticatedOwnerSettingsRoute,
   } as any);
-
 const AuthenticatedOwnerAccountSettingsRoute =
-  AuthenticatedOwnerAccountSettingsImport.update({
+  AuthenticatedOwnerAccountSettingsRouteImport.update({
     id: '/account/settings',
     path: '/account/settings',
-    getParentRoute: () => AuthenticatedOwnerRoute
+    getParentRoute: () => AuthenticatedOwnerRoute,
   } as any);
-
-const AuthenticatedOwnerModelNewRoute = AuthenticatedOwnerModelNewImport.update(
-  {
+const AuthenticatedOwnerModelNewRoute =
+  AuthenticatedOwnerModelNewRouteImport.update({
     id: '/new',
     path: '/new',
-    getParentRoute: () => AuthenticatedOwnerModelRoute
-  } as any
-);
-
+    getParentRoute: () => AuthenticatedOwnerModelRoute,
+  } as any);
 const AuthenticatedOwnerAccountSettingsIndexRoute =
-  AuthenticatedOwnerAccountSettingsIndexImport.update({
+  AuthenticatedOwnerAccountSettingsIndexRouteImport.update({
     id: '/',
     path: '/',
-    getParentRoute: () => AuthenticatedOwnerAccountSettingsRoute
+    getParentRoute: () => AuthenticatedOwnerAccountSettingsRoute,
   } as any);
-
 const AuthenticatedOwnerModelIdIndexRoute =
-  AuthenticatedOwnerModelIdIndexImport.update({
+  AuthenticatedOwnerModelIdIndexRouteImport.update({
     id: '/$id/',
     path: '/$id/',
-    getParentRoute: () => AuthenticatedOwnerModelRoute
+    getParentRoute: () => AuthenticatedOwnerModelRoute,
   } as any);
-
 const AuthenticatedOwnerAccountSettingsPasswordRoute =
-  AuthenticatedOwnerAccountSettingsPasswordImport.update({
+  AuthenticatedOwnerAccountSettingsPasswordRouteImport.update({
     id: '/password',
     path: '/password',
-    getParentRoute: () => AuthenticatedOwnerAccountSettingsRoute
+    getParentRoute: () => AuthenticatedOwnerAccountSettingsRoute,
   } as any);
-
 const AuthenticatedOwnerModelIdEditRoute =
-  AuthenticatedOwnerModelIdEditImport.update({
+  AuthenticatedOwnerModelIdEditRouteImport.update({
     id: '/$id/edit',
     path: '/$id/edit',
-    getParentRoute: () => AuthenticatedOwnerModelRoute
+    getParentRoute: () => AuthenticatedOwnerModelRoute,
   } as any);
 
-// Populate the FileRoutesByPath interface
+export interface FileRoutesByFullPath {
+  '/': typeof PrototypeIndexRoute;
+  '/auth': typeof AuthRouteWithChildren;
+  '/$owner': typeof AuthenticatedOwnerRouteWithChildren;
+  '/auth/reset-password': typeof AuthResetPasswordRoute;
+  '/auth/signin': typeof AuthSigninRoute;
+  '/auth/signup': typeof AuthSignupRoute;
+  '/$owner/$model': typeof AuthenticatedOwnerModelRouteWithChildren;
+  '/$owner/settings': typeof AuthenticatedOwnerSettingsRouteWithChildren;
+  '/admin/content': typeof PrototypeAdminContentRoute;
+  '/admin/dashboard': typeof PrototypeAdminDashboardRoute;
+  '/admin/matches': typeof PrototypeAdminMatchesRoute;
+  '/admin/users': typeof PrototypeAdminUsersRoute;
+  '/players/new': typeof PrototypePlayersNewRoute;
+  '/user/dashboard': typeof PrototypeUserDashboardRoute;
+  '/user/profile': typeof PrototypeUserProfileRoute;
+  '/user/settings': typeof PrototypeUserSettingsRoute;
+  '/$owner/design': typeof AuthenticatedOwnerDesignLazyRouteWithChildren;
+  '/$owner/': typeof AuthenticatedOwnerIndexRoute;
+  '/admin/': typeof PrototypeAdminIndexRoute;
+  '/players/': typeof PrototypePlayersIndexRoute;
+  '/probabilities/': typeof PrototypeProbabilitiesIndexRoute;
+  '/schedule/': typeof PrototypeScheduleIndexRoute;
+  '/teams/': typeof PrototypeTeamsIndexRoute;
+  '/user/': typeof PrototypeUserIndexRoute;
+  '/$owner/$model/new': typeof AuthenticatedOwnerModelNewRoute;
+  '/$owner/account/settings': typeof AuthenticatedOwnerAccountSettingsRouteWithChildren;
+  '/$owner/settings/access': typeof AuthenticatedOwnerSettingsAccessRoute;
+  '/$owner/settings/subscription': typeof AuthenticatedOwnerSettingsSubscriptionRoute;
+  '/players/$playerId/edit': typeof PrototypePlayersPlayerIdEditRoute;
+  '/$owner/design/forms': typeof AuthenticatedOwnerDesignFormsLazyRoute;
+  '/$owner/design/tables': typeof AuthenticatedOwnerDesignTablesLazyRoute;
+  '/$owner/design/typography': typeof AuthenticatedOwnerDesignTypographyLazyRoute;
+  '/$owner/$model/': typeof AuthenticatedOwnerModelIndexRoute;
+  '/$owner/settings/': typeof AuthenticatedOwnerSettingsIndexRoute;
+  '/$owner/design/': typeof AuthenticatedOwnerDesignIndexLazyRoute;
+  '/$owner/$model/$id/edit': typeof AuthenticatedOwnerModelIdEditRoute;
+  '/$owner/account/settings/password': typeof AuthenticatedOwnerAccountSettingsPasswordRoute;
+  '/$owner/$model/$id/': typeof AuthenticatedOwnerModelIdIndexRoute;
+  '/$owner/account/settings/': typeof AuthenticatedOwnerAccountSettingsIndexRoute;
+}
+export interface FileRoutesByTo {
+  '/': typeof PrototypeIndexRoute;
+  '/auth': typeof AuthRouteWithChildren;
+  '/auth/reset-password': typeof AuthResetPasswordRoute;
+  '/auth/signin': typeof AuthSigninRoute;
+  '/auth/signup': typeof AuthSignupRoute;
+  '/admin/content': typeof PrototypeAdminContentRoute;
+  '/admin/dashboard': typeof PrototypeAdminDashboardRoute;
+  '/admin/matches': typeof PrototypeAdminMatchesRoute;
+  '/admin/users': typeof PrototypeAdminUsersRoute;
+  '/players/new': typeof PrototypePlayersNewRoute;
+  '/user/dashboard': typeof PrototypeUserDashboardRoute;
+  '/user/profile': typeof PrototypeUserProfileRoute;
+  '/user/settings': typeof PrototypeUserSettingsRoute;
+  '/$owner': typeof AuthenticatedOwnerIndexRoute;
+  '/admin': typeof PrototypeAdminIndexRoute;
+  '/players': typeof PrototypePlayersIndexRoute;
+  '/probabilities': typeof PrototypeProbabilitiesIndexRoute;
+  '/schedule': typeof PrototypeScheduleIndexRoute;
+  '/teams': typeof PrototypeTeamsIndexRoute;
+  '/user': typeof PrototypeUserIndexRoute;
+  '/$owner/$model/new': typeof AuthenticatedOwnerModelNewRoute;
+  '/$owner/settings/access': typeof AuthenticatedOwnerSettingsAccessRoute;
+  '/$owner/settings/subscription': typeof AuthenticatedOwnerSettingsSubscriptionRoute;
+  '/players/$playerId/edit': typeof PrototypePlayersPlayerIdEditRoute;
+  '/$owner/design/forms': typeof AuthenticatedOwnerDesignFormsLazyRoute;
+  '/$owner/design/tables': typeof AuthenticatedOwnerDesignTablesLazyRoute;
+  '/$owner/design/typography': typeof AuthenticatedOwnerDesignTypographyLazyRoute;
+  '/$owner/$model': typeof AuthenticatedOwnerModelIndexRoute;
+  '/$owner/settings': typeof AuthenticatedOwnerSettingsIndexRoute;
+  '/$owner/design': typeof AuthenticatedOwnerDesignIndexLazyRoute;
+  '/$owner/$model/$id/edit': typeof AuthenticatedOwnerModelIdEditRoute;
+  '/$owner/account/settings/password': typeof AuthenticatedOwnerAccountSettingsPasswordRoute;
+  '/$owner/$model/$id': typeof AuthenticatedOwnerModelIdIndexRoute;
+  '/$owner/account/settings': typeof AuthenticatedOwnerAccountSettingsIndexRoute;
+}
+export interface FileRoutesById {
+  __root__: typeof rootRouteImport;
+  '/_authenticated': typeof AuthenticatedRouteWithChildren;
+  '/_prototype': typeof PrototypeRouteWithChildren;
+  '/auth': typeof AuthRouteWithChildren;
+  '/_authenticated/$owner': typeof AuthenticatedOwnerRouteWithChildren;
+  '/auth/reset-password': typeof AuthResetPasswordRoute;
+  '/auth/signin': typeof AuthSigninRoute;
+  '/auth/signup': typeof AuthSignupRoute;
+  '/_prototype/': typeof PrototypeIndexRoute;
+  '/_authenticated/$owner/$model': typeof AuthenticatedOwnerModelRouteWithChildren;
+  '/_authenticated/$owner/settings': typeof AuthenticatedOwnerSettingsRouteWithChildren;
+  '/_prototype/admin/content': typeof PrototypeAdminContentRoute;
+  '/_prototype/admin/dashboard': typeof PrototypeAdminDashboardRoute;
+  '/_prototype/admin/matches': typeof PrototypeAdminMatchesRoute;
+  '/_prototype/admin/users': typeof PrototypeAdminUsersRoute;
+  '/_prototype/players/new': typeof PrototypePlayersNewRoute;
+  '/_prototype/user/dashboard': typeof PrototypeUserDashboardRoute;
+  '/_prototype/user/profile': typeof PrototypeUserProfileRoute;
+  '/_prototype/user/settings': typeof PrototypeUserSettingsRoute;
+  '/_authenticated/$owner/design': typeof AuthenticatedOwnerDesignLazyRouteWithChildren;
+  '/_authenticated/$owner/': typeof AuthenticatedOwnerIndexRoute;
+  '/_prototype/admin/': typeof PrototypeAdminIndexRoute;
+  '/_prototype/players/': typeof PrototypePlayersIndexRoute;
+  '/_prototype/probabilities/': typeof PrototypeProbabilitiesIndexRoute;
+  '/_prototype/schedule/': typeof PrototypeScheduleIndexRoute;
+  '/_prototype/teams/': typeof PrototypeTeamsIndexRoute;
+  '/_prototype/user/': typeof PrototypeUserIndexRoute;
+  '/_authenticated/$owner/$model/new': typeof AuthenticatedOwnerModelNewRoute;
+  '/_authenticated/$owner/account/settings': typeof AuthenticatedOwnerAccountSettingsRouteWithChildren;
+  '/_authenticated/$owner/settings/access': typeof AuthenticatedOwnerSettingsAccessRoute;
+  '/_authenticated/$owner/settings/subscription': typeof AuthenticatedOwnerSettingsSubscriptionRoute;
+  '/_prototype/players/$playerId/edit': typeof PrototypePlayersPlayerIdEditRoute;
+  '/_authenticated/$owner/design/forms': typeof AuthenticatedOwnerDesignFormsLazyRoute;
+  '/_authenticated/$owner/design/tables': typeof AuthenticatedOwnerDesignTablesLazyRoute;
+  '/_authenticated/$owner/design/typography': typeof AuthenticatedOwnerDesignTypographyLazyRoute;
+  '/_authenticated/$owner/$model/': typeof AuthenticatedOwnerModelIndexRoute;
+  '/_authenticated/$owner/settings/': typeof AuthenticatedOwnerSettingsIndexRoute;
+  '/_authenticated/$owner/design/': typeof AuthenticatedOwnerDesignIndexLazyRoute;
+  '/_authenticated/$owner/$model/$id/edit': typeof AuthenticatedOwnerModelIdEditRoute;
+  '/_authenticated/$owner/account/settings/password': typeof AuthenticatedOwnerAccountSettingsPasswordRoute;
+  '/_authenticated/$owner/$model/$id/': typeof AuthenticatedOwnerModelIdIndexRoute;
+  '/_authenticated/$owner/account/settings/': typeof AuthenticatedOwnerAccountSettingsIndexRoute;
+}
+export interface FileRouteTypes {
+  fileRoutesByFullPath: FileRoutesByFullPath;
+  fullPaths:
+    | '/'
+    | '/auth'
+    | '/$owner'
+    | '/auth/reset-password'
+    | '/auth/signin'
+    | '/auth/signup'
+    | '/$owner/$model'
+    | '/$owner/settings'
+    | '/admin/content'
+    | '/admin/dashboard'
+    | '/admin/matches'
+    | '/admin/users'
+    | '/players/new'
+    | '/user/dashboard'
+    | '/user/profile'
+    | '/user/settings'
+    | '/$owner/design'
+    | '/$owner/'
+    | '/admin/'
+    | '/players/'
+    | '/probabilities/'
+    | '/schedule/'
+    | '/teams/'
+    | '/user/'
+    | '/$owner/$model/new'
+    | '/$owner/account/settings'
+    | '/$owner/settings/access'
+    | '/$owner/settings/subscription'
+    | '/players/$playerId/edit'
+    | '/$owner/design/forms'
+    | '/$owner/design/tables'
+    | '/$owner/design/typography'
+    | '/$owner/$model/'
+    | '/$owner/settings/'
+    | '/$owner/design/'
+    | '/$owner/$model/$id/edit'
+    | '/$owner/account/settings/password'
+    | '/$owner/$model/$id/'
+    | '/$owner/account/settings/';
+  fileRoutesByTo: FileRoutesByTo;
+  to:
+    | '/'
+    | '/auth'
+    | '/auth/reset-password'
+    | '/auth/signin'
+    | '/auth/signup'
+    | '/admin/content'
+    | '/admin/dashboard'
+    | '/admin/matches'
+    | '/admin/users'
+    | '/players/new'
+    | '/user/dashboard'
+    | '/user/profile'
+    | '/user/settings'
+    | '/$owner'
+    | '/admin'
+    | '/players'
+    | '/probabilities'
+    | '/schedule'
+    | '/teams'
+    | '/user'
+    | '/$owner/$model/new'
+    | '/$owner/settings/access'
+    | '/$owner/settings/subscription'
+    | '/players/$playerId/edit'
+    | '/$owner/design/forms'
+    | '/$owner/design/tables'
+    | '/$owner/design/typography'
+    | '/$owner/$model'
+    | '/$owner/settings'
+    | '/$owner/design'
+    | '/$owner/$model/$id/edit'
+    | '/$owner/account/settings/password'
+    | '/$owner/$model/$id'
+    | '/$owner/account/settings';
+  id:
+    | '__root__'
+    | '/_authenticated'
+    | '/_prototype'
+    | '/auth'
+    | '/_authenticated/$owner'
+    | '/auth/reset-password'
+    | '/auth/signin'
+    | '/auth/signup'
+    | '/_prototype/'
+    | '/_authenticated/$owner/$model'
+    | '/_authenticated/$owner/settings'
+    | '/_prototype/admin/content'
+    | '/_prototype/admin/dashboard'
+    | '/_prototype/admin/matches'
+    | '/_prototype/admin/users'
+    | '/_prototype/players/new'
+    | '/_prototype/user/dashboard'
+    | '/_prototype/user/profile'
+    | '/_prototype/user/settings'
+    | '/_authenticated/$owner/design'
+    | '/_authenticated/$owner/'
+    | '/_prototype/admin/'
+    | '/_prototype/players/'
+    | '/_prototype/probabilities/'
+    | '/_prototype/schedule/'
+    | '/_prototype/teams/'
+    | '/_prototype/user/'
+    | '/_authenticated/$owner/$model/new'
+    | '/_authenticated/$owner/account/settings'
+    | '/_authenticated/$owner/settings/access'
+    | '/_authenticated/$owner/settings/subscription'
+    | '/_prototype/players/$playerId/edit'
+    | '/_authenticated/$owner/design/forms'
+    | '/_authenticated/$owner/design/tables'
+    | '/_authenticated/$owner/design/typography'
+    | '/_authenticated/$owner/$model/'
+    | '/_authenticated/$owner/settings/'
+    | '/_authenticated/$owner/design/'
+    | '/_authenticated/$owner/$model/$id/edit'
+    | '/_authenticated/$owner/account/settings/password'
+    | '/_authenticated/$owner/$model/$id/'
+    | '/_authenticated/$owner/account/settings/';
+  fileRoutesById: FileRoutesById;
+}
+export interface RootRouteChildren {
+  AuthenticatedRoute: typeof AuthenticatedRouteWithChildren;
+  PrototypeRoute: typeof PrototypeRouteWithChildren;
+  AuthRoute: typeof AuthRouteWithChildren;
+}
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/_authenticated': {
-      id: '/_authenticated';
-      path: '';
-      fullPath: '';
-      preLoaderRoute: typeof AuthenticatedImport;
-      parentRoute: typeof rootRoute;
-    };
     '/auth': {
       id: '/auth';
       path: '/auth';
       fullPath: '/auth';
-      preLoaderRoute: typeof AuthImport;
-      parentRoute: typeof rootRoute;
+      preLoaderRoute: typeof AuthRouteImport;
+      parentRoute: typeof rootRouteImport;
     };
-    '/_authenticated/$owner': {
-      id: '/_authenticated/$owner';
-      path: '/$owner';
-      fullPath: '/$owner';
-      preLoaderRoute: typeof AuthenticatedOwnerImport;
-      parentRoute: typeof AuthenticatedImport;
+    '/_prototype': {
+      id: '/_prototype';
+      path: '';
+      fullPath: '/';
+      preLoaderRoute: typeof PrototypeRouteImport;
+      parentRoute: typeof rootRouteImport;
     };
-    '/auth/reset-password': {
-      id: '/auth/reset-password';
-      path: '/reset-password';
-      fullPath: '/auth/reset-password';
-      preLoaderRoute: typeof AuthResetPasswordImport;
-      parentRoute: typeof AuthImport;
+    '/_authenticated': {
+      id: '/_authenticated';
+      path: '';
+      fullPath: '/';
+      preLoaderRoute: typeof AuthenticatedRouteImport;
+      parentRoute: typeof rootRouteImport;
     };
-    '/auth/signin': {
-      id: '/auth/signin';
-      path: '/signin';
-      fullPath: '/auth/signin';
-      preLoaderRoute: typeof AuthSigninImport;
-      parentRoute: typeof AuthImport;
+    '/_prototype/': {
+      id: '/_prototype/';
+      path: '/';
+      fullPath: '/';
+      preLoaderRoute: typeof PrototypeIndexRouteImport;
+      parentRoute: typeof PrototypeRoute;
     };
     '/auth/signup': {
       id: '/auth/signup';
       path: '/signup';
       fullPath: '/auth/signup';
-      preLoaderRoute: typeof AuthSignupImport;
-      parentRoute: typeof AuthImport;
+      preLoaderRoute: typeof AuthSignupRouteImport;
+      parentRoute: typeof AuthRoute;
     };
-    '/_authenticated/': {
-      id: '/_authenticated/';
-      path: '/';
-      fullPath: '/';
-      preLoaderRoute: typeof AuthenticatedIndexImport;
-      parentRoute: typeof AuthenticatedImport;
+    '/auth/signin': {
+      id: '/auth/signin';
+      path: '/signin';
+      fullPath: '/auth/signin';
+      preLoaderRoute: typeof AuthSigninRouteImport;
+      parentRoute: typeof AuthRoute;
     };
-    '/_authenticated/$owner/$model': {
-      id: '/_authenticated/$owner/$model';
-      path: '/$model';
-      fullPath: '/$owner/$model';
-      preLoaderRoute: typeof AuthenticatedOwnerModelImport;
-      parentRoute: typeof AuthenticatedOwnerImport;
+    '/auth/reset-password': {
+      id: '/auth/reset-password';
+      path: '/reset-password';
+      fullPath: '/auth/reset-password';
+      preLoaderRoute: typeof AuthResetPasswordRouteImport;
+      parentRoute: typeof AuthRoute;
     };
-    '/_authenticated/$owner/settings': {
-      id: '/_authenticated/$owner/settings';
-      path: '/settings';
-      fullPath: '/$owner/settings';
-      preLoaderRoute: typeof AuthenticatedOwnerSettingsImport;
-      parentRoute: typeof AuthenticatedOwnerImport;
+    '/_authenticated/$owner': {
+      id: '/_authenticated/$owner';
+      path: '/$owner';
+      fullPath: '/$owner';
+      preLoaderRoute: typeof AuthenticatedOwnerRouteImport;
+      parentRoute: typeof AuthenticatedRoute;
     };
-    '/_authenticated/$owner/design': {
-      id: '/_authenticated/$owner/design';
-      path: '/design';
-      fullPath: '/$owner/design';
-      preLoaderRoute: typeof AuthenticatedOwnerDesignLazyImport;
-      parentRoute: typeof AuthenticatedOwnerImport;
+    '/_prototype/user/': {
+      id: '/_prototype/user/';
+      path: '/user';
+      fullPath: '/user/';
+      preLoaderRoute: typeof PrototypeUserIndexRouteImport;
+      parentRoute: typeof PrototypeRoute;
+    };
+    '/_prototype/teams/': {
+      id: '/_prototype/teams/';
+      path: '/teams';
+      fullPath: '/teams/';
+      preLoaderRoute: typeof PrototypeTeamsIndexRouteImport;
+      parentRoute: typeof PrototypeRoute;
+    };
+    '/_prototype/schedule/': {
+      id: '/_prototype/schedule/';
+      path: '/schedule';
+      fullPath: '/schedule/';
+      preLoaderRoute: typeof PrototypeScheduleIndexRouteImport;
+      parentRoute: typeof PrototypeRoute;
+    };
+    '/_prototype/probabilities/': {
+      id: '/_prototype/probabilities/';
+      path: '/probabilities';
+      fullPath: '/probabilities/';
+      preLoaderRoute: typeof PrototypeProbabilitiesIndexRouteImport;
+      parentRoute: typeof PrototypeRoute;
+    };
+    '/_prototype/players/': {
+      id: '/_prototype/players/';
+      path: '/players';
+      fullPath: '/players/';
+      preLoaderRoute: typeof PrototypePlayersIndexRouteImport;
+      parentRoute: typeof PrototypeRoute;
+    };
+    '/_prototype/admin/': {
+      id: '/_prototype/admin/';
+      path: '/admin';
+      fullPath: '/admin/';
+      preLoaderRoute: typeof PrototypeAdminIndexRouteImport;
+      parentRoute: typeof PrototypeRoute;
     };
     '/_authenticated/$owner/': {
       id: '/_authenticated/$owner/';
       path: '/';
       fullPath: '/$owner/';
-      preLoaderRoute: typeof AuthenticatedOwnerIndexImport;
-      parentRoute: typeof AuthenticatedOwnerImport;
+      preLoaderRoute: typeof AuthenticatedOwnerIndexRouteImport;
+      parentRoute: typeof AuthenticatedOwnerRoute;
     };
-    '/_authenticated/$owner/$model/new': {
-      id: '/_authenticated/$owner/$model/new';
-      path: '/new';
-      fullPath: '/$owner/$model/new';
-      preLoaderRoute: typeof AuthenticatedOwnerModelNewImport;
-      parentRoute: typeof AuthenticatedOwnerModelImport;
+    '/_authenticated/$owner/design': {
+      id: '/_authenticated/$owner/design';
+      path: '/design';
+      fullPath: '/$owner/design';
+      preLoaderRoute: typeof AuthenticatedOwnerDesignLazyRouteImport;
+      parentRoute: typeof AuthenticatedOwnerRoute;
     };
-    '/_authenticated/$owner/account/settings': {
-      id: '/_authenticated/$owner/account/settings';
-      path: '/account/settings';
-      fullPath: '/$owner/account/settings';
-      preLoaderRoute: typeof AuthenticatedOwnerAccountSettingsImport;
-      parentRoute: typeof AuthenticatedOwnerImport;
+    '/_prototype/user/settings': {
+      id: '/_prototype/user/settings';
+      path: '/user/settings';
+      fullPath: '/user/settings';
+      preLoaderRoute: typeof PrototypeUserSettingsRouteImport;
+      parentRoute: typeof PrototypeRoute;
     };
-    '/_authenticated/$owner/settings/access': {
-      id: '/_authenticated/$owner/settings/access';
-      path: '/access';
-      fullPath: '/$owner/settings/access';
-      preLoaderRoute: typeof AuthenticatedOwnerSettingsAccessImport;
-      parentRoute: typeof AuthenticatedOwnerSettingsImport;
+    '/_prototype/user/profile': {
+      id: '/_prototype/user/profile';
+      path: '/user/profile';
+      fullPath: '/user/profile';
+      preLoaderRoute: typeof PrototypeUserProfileRouteImport;
+      parentRoute: typeof PrototypeRoute;
     };
-    '/_authenticated/$owner/settings/subscription': {
-      id: '/_authenticated/$owner/settings/subscription';
-      path: '/subscription';
-      fullPath: '/$owner/settings/subscription';
-      preLoaderRoute: typeof AuthenticatedOwnerSettingsSubscriptionImport;
-      parentRoute: typeof AuthenticatedOwnerSettingsImport;
+    '/_prototype/user/dashboard': {
+      id: '/_prototype/user/dashboard';
+      path: '/user/dashboard';
+      fullPath: '/user/dashboard';
+      preLoaderRoute: typeof PrototypeUserDashboardRouteImport;
+      parentRoute: typeof PrototypeRoute;
     };
-    '/_authenticated/$owner/design/forms': {
-      id: '/_authenticated/$owner/design/forms';
-      path: '/forms';
-      fullPath: '/$owner/design/forms';
-      preLoaderRoute: typeof AuthenticatedOwnerDesignFormsLazyImport;
-      parentRoute: typeof AuthenticatedOwnerDesignLazyImport;
+    '/_prototype/players/new': {
+      id: '/_prototype/players/new';
+      path: '/players/new';
+      fullPath: '/players/new';
+      preLoaderRoute: typeof PrototypePlayersNewRouteImport;
+      parentRoute: typeof PrototypeRoute;
     };
-    '/_authenticated/$owner/design/tables': {
-      id: '/_authenticated/$owner/design/tables';
-      path: '/tables';
-      fullPath: '/$owner/design/tables';
-      preLoaderRoute: typeof AuthenticatedOwnerDesignTablesLazyImport;
-      parentRoute: typeof AuthenticatedOwnerDesignLazyImport;
+    '/_prototype/admin/users': {
+      id: '/_prototype/admin/users';
+      path: '/admin/users';
+      fullPath: '/admin/users';
+      preLoaderRoute: typeof PrototypeAdminUsersRouteImport;
+      parentRoute: typeof PrototypeRoute;
     };
-    '/_authenticated/$owner/design/typography': {
-      id: '/_authenticated/$owner/design/typography';
-      path: '/typography';
-      fullPath: '/$owner/design/typography';
-      preLoaderRoute: typeof AuthenticatedOwnerDesignTypographyLazyImport;
-      parentRoute: typeof AuthenticatedOwnerDesignLazyImport;
+    '/_prototype/admin/matches': {
+      id: '/_prototype/admin/matches';
+      path: '/admin/matches';
+      fullPath: '/admin/matches';
+      preLoaderRoute: typeof PrototypeAdminMatchesRouteImport;
+      parentRoute: typeof PrototypeRoute;
     };
-    '/_authenticated/$owner/$model/': {
-      id: '/_authenticated/$owner/$model/';
-      path: '/';
-      fullPath: '/$owner/$model/';
-      preLoaderRoute: typeof AuthenticatedOwnerModelIndexImport;
-      parentRoute: typeof AuthenticatedOwnerModelImport;
+    '/_prototype/admin/dashboard': {
+      id: '/_prototype/admin/dashboard';
+      path: '/admin/dashboard';
+      fullPath: '/admin/dashboard';
+      preLoaderRoute: typeof PrototypeAdminDashboardRouteImport;
+      parentRoute: typeof PrototypeRoute;
     };
-    '/_authenticated/$owner/settings/': {
-      id: '/_authenticated/$owner/settings/';
-      path: '/';
-      fullPath: '/$owner/settings/';
-      preLoaderRoute: typeof AuthenticatedOwnerSettingsIndexImport;
-      parentRoute: typeof AuthenticatedOwnerSettingsImport;
+    '/_prototype/admin/content': {
+      id: '/_prototype/admin/content';
+      path: '/admin/content';
+      fullPath: '/admin/content';
+      preLoaderRoute: typeof PrototypeAdminContentRouteImport;
+      parentRoute: typeof PrototypeRoute;
+    };
+    '/_authenticated/$owner/settings': {
+      id: '/_authenticated/$owner/settings';
+      path: '/settings';
+      fullPath: '/$owner/settings';
+      preLoaderRoute: typeof AuthenticatedOwnerSettingsRouteImport;
+      parentRoute: typeof AuthenticatedOwnerRoute;
+    };
+    '/_authenticated/$owner/$model': {
+      id: '/_authenticated/$owner/$model';
+      path: '/$model';
+      fullPath: '/$owner/$model';
+      preLoaderRoute: typeof AuthenticatedOwnerModelRouteImport;
+      parentRoute: typeof AuthenticatedOwnerRoute;
     };
     '/_authenticated/$owner/design/': {
       id: '/_authenticated/$owner/design/';
       path: '/';
       fullPath: '/$owner/design/';
-      preLoaderRoute: typeof AuthenticatedOwnerDesignIndexLazyImport;
-      parentRoute: typeof AuthenticatedOwnerDesignLazyImport;
+      preLoaderRoute: typeof AuthenticatedOwnerDesignIndexLazyRouteImport;
+      parentRoute: typeof AuthenticatedOwnerDesignLazyRoute;
     };
-    '/_authenticated/$owner/$model/$id/edit': {
-      id: '/_authenticated/$owner/$model/$id/edit';
-      path: '/$id/edit';
-      fullPath: '/$owner/$model/$id/edit';
-      preLoaderRoute: typeof AuthenticatedOwnerModelIdEditImport;
-      parentRoute: typeof AuthenticatedOwnerModelImport;
+    '/_authenticated/$owner/settings/': {
+      id: '/_authenticated/$owner/settings/';
+      path: '/';
+      fullPath: '/$owner/settings/';
+      preLoaderRoute: typeof AuthenticatedOwnerSettingsIndexRouteImport;
+      parentRoute: typeof AuthenticatedOwnerSettingsRoute;
     };
-    '/_authenticated/$owner/account/settings/password': {
-      id: '/_authenticated/$owner/account/settings/password';
-      path: '/password';
-      fullPath: '/$owner/account/settings/password';
-      preLoaderRoute: typeof AuthenticatedOwnerAccountSettingsPasswordImport;
-      parentRoute: typeof AuthenticatedOwnerAccountSettingsImport;
+    '/_authenticated/$owner/$model/': {
+      id: '/_authenticated/$owner/$model/';
+      path: '/';
+      fullPath: '/$owner/$model/';
+      preLoaderRoute: typeof AuthenticatedOwnerModelIndexRouteImport;
+      parentRoute: typeof AuthenticatedOwnerModelRoute;
     };
-    '/_authenticated/$owner/$model/$id/': {
-      id: '/_authenticated/$owner/$model/$id/';
-      path: '/$id';
-      fullPath: '/$owner/$model/$id';
-      preLoaderRoute: typeof AuthenticatedOwnerModelIdIndexImport;
-      parentRoute: typeof AuthenticatedOwnerModelImport;
+    '/_authenticated/$owner/design/typography': {
+      id: '/_authenticated/$owner/design/typography';
+      path: '/typography';
+      fullPath: '/$owner/design/typography';
+      preLoaderRoute: typeof AuthenticatedOwnerDesignTypographyLazyRouteImport;
+      parentRoute: typeof AuthenticatedOwnerDesignLazyRoute;
+    };
+    '/_authenticated/$owner/design/tables': {
+      id: '/_authenticated/$owner/design/tables';
+      path: '/tables';
+      fullPath: '/$owner/design/tables';
+      preLoaderRoute: typeof AuthenticatedOwnerDesignTablesLazyRouteImport;
+      parentRoute: typeof AuthenticatedOwnerDesignLazyRoute;
+    };
+    '/_authenticated/$owner/design/forms': {
+      id: '/_authenticated/$owner/design/forms';
+      path: '/forms';
+      fullPath: '/$owner/design/forms';
+      preLoaderRoute: typeof AuthenticatedOwnerDesignFormsLazyRouteImport;
+      parentRoute: typeof AuthenticatedOwnerDesignLazyRoute;
+    };
+    '/_prototype/players/$playerId/edit': {
+      id: '/_prototype/players/$playerId/edit';
+      path: '/players/$playerId/edit';
+      fullPath: '/players/$playerId/edit';
+      preLoaderRoute: typeof PrototypePlayersPlayerIdEditRouteImport;
+      parentRoute: typeof PrototypeRoute;
+    };
+    '/_authenticated/$owner/settings/subscription': {
+      id: '/_authenticated/$owner/settings/subscription';
+      path: '/subscription';
+      fullPath: '/$owner/settings/subscription';
+      preLoaderRoute: typeof AuthenticatedOwnerSettingsSubscriptionRouteImport;
+      parentRoute: typeof AuthenticatedOwnerSettingsRoute;
+    };
+    '/_authenticated/$owner/settings/access': {
+      id: '/_authenticated/$owner/settings/access';
+      path: '/access';
+      fullPath: '/$owner/settings/access';
+      preLoaderRoute: typeof AuthenticatedOwnerSettingsAccessRouteImport;
+      parentRoute: typeof AuthenticatedOwnerSettingsRoute;
+    };
+    '/_authenticated/$owner/account/settings': {
+      id: '/_authenticated/$owner/account/settings';
+      path: '/account/settings';
+      fullPath: '/$owner/account/settings';
+      preLoaderRoute: typeof AuthenticatedOwnerAccountSettingsRouteImport;
+      parentRoute: typeof AuthenticatedOwnerRoute;
+    };
+    '/_authenticated/$owner/$model/new': {
+      id: '/_authenticated/$owner/$model/new';
+      path: '/new';
+      fullPath: '/$owner/$model/new';
+      preLoaderRoute: typeof AuthenticatedOwnerModelNewRouteImport;
+      parentRoute: typeof AuthenticatedOwnerModelRoute;
     };
     '/_authenticated/$owner/account/settings/': {
       id: '/_authenticated/$owner/account/settings/';
       path: '/';
       fullPath: '/$owner/account/settings/';
-      preLoaderRoute: typeof AuthenticatedOwnerAccountSettingsIndexImport;
-      parentRoute: typeof AuthenticatedOwnerAccountSettingsImport;
+      preLoaderRoute: typeof AuthenticatedOwnerAccountSettingsIndexRouteImport;
+      parentRoute: typeof AuthenticatedOwnerAccountSettingsRoute;
+    };
+    '/_authenticated/$owner/$model/$id/': {
+      id: '/_authenticated/$owner/$model/$id/';
+      path: '/$id';
+      fullPath: '/$owner/$model/$id/';
+      preLoaderRoute: typeof AuthenticatedOwnerModelIdIndexRouteImport;
+      parentRoute: typeof AuthenticatedOwnerModelRoute;
+    };
+    '/_authenticated/$owner/account/settings/password': {
+      id: '/_authenticated/$owner/account/settings/password';
+      path: '/password';
+      fullPath: '/$owner/account/settings/password';
+      preLoaderRoute: typeof AuthenticatedOwnerAccountSettingsPasswordRouteImport;
+      parentRoute: typeof AuthenticatedOwnerAccountSettingsRoute;
+    };
+    '/_authenticated/$owner/$model/$id/edit': {
+      id: '/_authenticated/$owner/$model/$id/edit';
+      path: '/$id/edit';
+      fullPath: '/$owner/$model/$id/edit';
+      preLoaderRoute: typeof AuthenticatedOwnerModelIdEditRouteImport;
+      parentRoute: typeof AuthenticatedOwnerModelRoute;
     };
   }
 }
-
-// Create and export the route tree
 
 interface AuthenticatedOwnerModelRouteChildren {
   AuthenticatedOwnerModelNewRoute: typeof AuthenticatedOwnerModelNewRoute;
@@ -435,12 +858,12 @@ const AuthenticatedOwnerModelRouteChildren: AuthenticatedOwnerModelRouteChildren
     AuthenticatedOwnerModelNewRoute: AuthenticatedOwnerModelNewRoute,
     AuthenticatedOwnerModelIndexRoute: AuthenticatedOwnerModelIndexRoute,
     AuthenticatedOwnerModelIdEditRoute: AuthenticatedOwnerModelIdEditRoute,
-    AuthenticatedOwnerModelIdIndexRoute: AuthenticatedOwnerModelIdIndexRoute
+    AuthenticatedOwnerModelIdIndexRoute: AuthenticatedOwnerModelIdIndexRoute,
   };
 
 const AuthenticatedOwnerModelRouteWithChildren =
   AuthenticatedOwnerModelRoute._addFileChildren(
-    AuthenticatedOwnerModelRouteChildren
+    AuthenticatedOwnerModelRouteChildren,
   );
 
 interface AuthenticatedOwnerSettingsRouteChildren {
@@ -455,12 +878,12 @@ const AuthenticatedOwnerSettingsRouteChildren: AuthenticatedOwnerSettingsRouteCh
       AuthenticatedOwnerSettingsAccessRoute,
     AuthenticatedOwnerSettingsSubscriptionRoute:
       AuthenticatedOwnerSettingsSubscriptionRoute,
-    AuthenticatedOwnerSettingsIndexRoute: AuthenticatedOwnerSettingsIndexRoute
+    AuthenticatedOwnerSettingsIndexRoute: AuthenticatedOwnerSettingsIndexRoute,
   };
 
 const AuthenticatedOwnerSettingsRouteWithChildren =
   AuthenticatedOwnerSettingsRoute._addFileChildren(
-    AuthenticatedOwnerSettingsRouteChildren
+    AuthenticatedOwnerSettingsRouteChildren,
   );
 
 interface AuthenticatedOwnerDesignLazyRouteChildren {
@@ -479,12 +902,12 @@ const AuthenticatedOwnerDesignLazyRouteChildren: AuthenticatedOwnerDesignLazyRou
     AuthenticatedOwnerDesignTypographyLazyRoute:
       AuthenticatedOwnerDesignTypographyLazyRoute,
     AuthenticatedOwnerDesignIndexLazyRoute:
-      AuthenticatedOwnerDesignIndexLazyRoute
+      AuthenticatedOwnerDesignIndexLazyRoute,
   };
 
 const AuthenticatedOwnerDesignLazyRouteWithChildren =
   AuthenticatedOwnerDesignLazyRoute._addFileChildren(
-    AuthenticatedOwnerDesignLazyRouteChildren
+    AuthenticatedOwnerDesignLazyRouteChildren,
   );
 
 interface AuthenticatedOwnerAccountSettingsRouteChildren {
@@ -497,12 +920,12 @@ const AuthenticatedOwnerAccountSettingsRouteChildren: AuthenticatedOwnerAccountS
     AuthenticatedOwnerAccountSettingsPasswordRoute:
       AuthenticatedOwnerAccountSettingsPasswordRoute,
     AuthenticatedOwnerAccountSettingsIndexRoute:
-      AuthenticatedOwnerAccountSettingsIndexRoute
+      AuthenticatedOwnerAccountSettingsIndexRoute,
   };
 
 const AuthenticatedOwnerAccountSettingsRouteWithChildren =
   AuthenticatedOwnerAccountSettingsRoute._addFileChildren(
-    AuthenticatedOwnerAccountSettingsRouteChildren
+    AuthenticatedOwnerAccountSettingsRouteChildren,
   );
 
 interface AuthenticatedOwnerRouteChildren {
@@ -520,7 +943,7 @@ const AuthenticatedOwnerRouteChildren: AuthenticatedOwnerRouteChildren = {
     AuthenticatedOwnerDesignLazyRouteWithChildren,
   AuthenticatedOwnerIndexRoute: AuthenticatedOwnerIndexRoute,
   AuthenticatedOwnerAccountSettingsRoute:
-    AuthenticatedOwnerAccountSettingsRouteWithChildren
+    AuthenticatedOwnerAccountSettingsRouteWithChildren,
 };
 
 const AuthenticatedOwnerRouteWithChildren =
@@ -528,16 +951,56 @@ const AuthenticatedOwnerRouteWithChildren =
 
 interface AuthenticatedRouteChildren {
   AuthenticatedOwnerRoute: typeof AuthenticatedOwnerRouteWithChildren;
-  AuthenticatedIndexRoute: typeof AuthenticatedIndexRoute;
 }
 
 const AuthenticatedRouteChildren: AuthenticatedRouteChildren = {
   AuthenticatedOwnerRoute: AuthenticatedOwnerRouteWithChildren,
-  AuthenticatedIndexRoute: AuthenticatedIndexRoute
 };
 
 const AuthenticatedRouteWithChildren = AuthenticatedRoute._addFileChildren(
-  AuthenticatedRouteChildren
+  AuthenticatedRouteChildren,
+);
+
+interface PrototypeRouteChildren {
+  PrototypeIndexRoute: typeof PrototypeIndexRoute;
+  PrototypeAdminContentRoute: typeof PrototypeAdminContentRoute;
+  PrototypeAdminDashboardRoute: typeof PrototypeAdminDashboardRoute;
+  PrototypeAdminMatchesRoute: typeof PrototypeAdminMatchesRoute;
+  PrototypeAdminUsersRoute: typeof PrototypeAdminUsersRoute;
+  PrototypePlayersNewRoute: typeof PrototypePlayersNewRoute;
+  PrototypeUserDashboardRoute: typeof PrototypeUserDashboardRoute;
+  PrototypeUserProfileRoute: typeof PrototypeUserProfileRoute;
+  PrototypeUserSettingsRoute: typeof PrototypeUserSettingsRoute;
+  PrototypeAdminIndexRoute: typeof PrototypeAdminIndexRoute;
+  PrototypePlayersIndexRoute: typeof PrototypePlayersIndexRoute;
+  PrototypeProbabilitiesIndexRoute: typeof PrototypeProbabilitiesIndexRoute;
+  PrototypeScheduleIndexRoute: typeof PrototypeScheduleIndexRoute;
+  PrototypeTeamsIndexRoute: typeof PrototypeTeamsIndexRoute;
+  PrototypeUserIndexRoute: typeof PrototypeUserIndexRoute;
+  PrototypePlayersPlayerIdEditRoute: typeof PrototypePlayersPlayerIdEditRoute;
+}
+
+const PrototypeRouteChildren: PrototypeRouteChildren = {
+  PrototypeIndexRoute: PrototypeIndexRoute,
+  PrototypeAdminContentRoute: PrototypeAdminContentRoute,
+  PrototypeAdminDashboardRoute: PrototypeAdminDashboardRoute,
+  PrototypeAdminMatchesRoute: PrototypeAdminMatchesRoute,
+  PrototypeAdminUsersRoute: PrototypeAdminUsersRoute,
+  PrototypePlayersNewRoute: PrototypePlayersNewRoute,
+  PrototypeUserDashboardRoute: PrototypeUserDashboardRoute,
+  PrototypeUserProfileRoute: PrototypeUserProfileRoute,
+  PrototypeUserSettingsRoute: PrototypeUserSettingsRoute,
+  PrototypeAdminIndexRoute: PrototypeAdminIndexRoute,
+  PrototypePlayersIndexRoute: PrototypePlayersIndexRoute,
+  PrototypeProbabilitiesIndexRoute: PrototypeProbabilitiesIndexRoute,
+  PrototypeScheduleIndexRoute: PrototypeScheduleIndexRoute,
+  PrototypeTeamsIndexRoute: PrototypeTeamsIndexRoute,
+  PrototypeUserIndexRoute: PrototypeUserIndexRoute,
+  PrototypePlayersPlayerIdEditRoute: PrototypePlayersPlayerIdEditRoute,
+};
+
+const PrototypeRouteWithChildren = PrototypeRoute._addFileChildren(
+  PrototypeRouteChildren,
 );
 
 interface AuthRouteChildren {
@@ -549,328 +1012,16 @@ interface AuthRouteChildren {
 const AuthRouteChildren: AuthRouteChildren = {
   AuthResetPasswordRoute: AuthResetPasswordRoute,
   AuthSigninRoute: AuthSigninRoute,
-  AuthSignupRoute: AuthSignupRoute
+  AuthSignupRoute: AuthSignupRoute,
 };
 
 const AuthRouteWithChildren = AuthRoute._addFileChildren(AuthRouteChildren);
 
-export interface FileRoutesByFullPath {
-  '': typeof AuthenticatedRouteWithChildren;
-  '/auth': typeof AuthRouteWithChildren;
-  '/$owner': typeof AuthenticatedOwnerRouteWithChildren;
-  '/auth/reset-password': typeof AuthResetPasswordRoute;
-  '/auth/signin': typeof AuthSigninRoute;
-  '/auth/signup': typeof AuthSignupRoute;
-  '/': typeof AuthenticatedIndexRoute;
-  '/$owner/$model': typeof AuthenticatedOwnerModelRouteWithChildren;
-  '/$owner/settings': typeof AuthenticatedOwnerSettingsRouteWithChildren;
-  '/$owner/design': typeof AuthenticatedOwnerDesignLazyRouteWithChildren;
-  '/$owner/': typeof AuthenticatedOwnerIndexRoute;
-  '/$owner/$model/new': typeof AuthenticatedOwnerModelNewRoute;
-  '/$owner/account/settings': typeof AuthenticatedOwnerAccountSettingsRouteWithChildren;
-  '/$owner/settings/access': typeof AuthenticatedOwnerSettingsAccessRoute;
-  '/$owner/settings/subscription': typeof AuthenticatedOwnerSettingsSubscriptionRoute;
-  '/$owner/design/forms': typeof AuthenticatedOwnerDesignFormsLazyRoute;
-  '/$owner/design/tables': typeof AuthenticatedOwnerDesignTablesLazyRoute;
-  '/$owner/design/typography': typeof AuthenticatedOwnerDesignTypographyLazyRoute;
-  '/$owner/$model/': typeof AuthenticatedOwnerModelIndexRoute;
-  '/$owner/settings/': typeof AuthenticatedOwnerSettingsIndexRoute;
-  '/$owner/design/': typeof AuthenticatedOwnerDesignIndexLazyRoute;
-  '/$owner/$model/$id/edit': typeof AuthenticatedOwnerModelIdEditRoute;
-  '/$owner/account/settings/password': typeof AuthenticatedOwnerAccountSettingsPasswordRoute;
-  '/$owner/$model/$id': typeof AuthenticatedOwnerModelIdIndexRoute;
-  '/$owner/account/settings/': typeof AuthenticatedOwnerAccountSettingsIndexRoute;
-}
-
-export interface FileRoutesByTo {
-  '/auth': typeof AuthRouteWithChildren;
-  '/auth/reset-password': typeof AuthResetPasswordRoute;
-  '/auth/signin': typeof AuthSigninRoute;
-  '/auth/signup': typeof AuthSignupRoute;
-  '/': typeof AuthenticatedIndexRoute;
-  '/$owner': typeof AuthenticatedOwnerIndexRoute;
-  '/$owner/$model/new': typeof AuthenticatedOwnerModelNewRoute;
-  '/$owner/settings/access': typeof AuthenticatedOwnerSettingsAccessRoute;
-  '/$owner/settings/subscription': typeof AuthenticatedOwnerSettingsSubscriptionRoute;
-  '/$owner/design/forms': typeof AuthenticatedOwnerDesignFormsLazyRoute;
-  '/$owner/design/tables': typeof AuthenticatedOwnerDesignTablesLazyRoute;
-  '/$owner/design/typography': typeof AuthenticatedOwnerDesignTypographyLazyRoute;
-  '/$owner/$model': typeof AuthenticatedOwnerModelIndexRoute;
-  '/$owner/settings': typeof AuthenticatedOwnerSettingsIndexRoute;
-  '/$owner/design': typeof AuthenticatedOwnerDesignIndexLazyRoute;
-  '/$owner/$model/$id/edit': typeof AuthenticatedOwnerModelIdEditRoute;
-  '/$owner/account/settings/password': typeof AuthenticatedOwnerAccountSettingsPasswordRoute;
-  '/$owner/$model/$id': typeof AuthenticatedOwnerModelIdIndexRoute;
-  '/$owner/account/settings': typeof AuthenticatedOwnerAccountSettingsIndexRoute;
-}
-
-export interface FileRoutesById {
-  __root__: typeof rootRoute;
-  '/_authenticated': typeof AuthenticatedRouteWithChildren;
-  '/auth': typeof AuthRouteWithChildren;
-  '/_authenticated/$owner': typeof AuthenticatedOwnerRouteWithChildren;
-  '/auth/reset-password': typeof AuthResetPasswordRoute;
-  '/auth/signin': typeof AuthSigninRoute;
-  '/auth/signup': typeof AuthSignupRoute;
-  '/_authenticated/': typeof AuthenticatedIndexRoute;
-  '/_authenticated/$owner/$model': typeof AuthenticatedOwnerModelRouteWithChildren;
-  '/_authenticated/$owner/settings': typeof AuthenticatedOwnerSettingsRouteWithChildren;
-  '/_authenticated/$owner/design': typeof AuthenticatedOwnerDesignLazyRouteWithChildren;
-  '/_authenticated/$owner/': typeof AuthenticatedOwnerIndexRoute;
-  '/_authenticated/$owner/$model/new': typeof AuthenticatedOwnerModelNewRoute;
-  '/_authenticated/$owner/account/settings': typeof AuthenticatedOwnerAccountSettingsRouteWithChildren;
-  '/_authenticated/$owner/settings/access': typeof AuthenticatedOwnerSettingsAccessRoute;
-  '/_authenticated/$owner/settings/subscription': typeof AuthenticatedOwnerSettingsSubscriptionRoute;
-  '/_authenticated/$owner/design/forms': typeof AuthenticatedOwnerDesignFormsLazyRoute;
-  '/_authenticated/$owner/design/tables': typeof AuthenticatedOwnerDesignTablesLazyRoute;
-  '/_authenticated/$owner/design/typography': typeof AuthenticatedOwnerDesignTypographyLazyRoute;
-  '/_authenticated/$owner/$model/': typeof AuthenticatedOwnerModelIndexRoute;
-  '/_authenticated/$owner/settings/': typeof AuthenticatedOwnerSettingsIndexRoute;
-  '/_authenticated/$owner/design/': typeof AuthenticatedOwnerDesignIndexLazyRoute;
-  '/_authenticated/$owner/$model/$id/edit': typeof AuthenticatedOwnerModelIdEditRoute;
-  '/_authenticated/$owner/account/settings/password': typeof AuthenticatedOwnerAccountSettingsPasswordRoute;
-  '/_authenticated/$owner/$model/$id/': typeof AuthenticatedOwnerModelIdIndexRoute;
-  '/_authenticated/$owner/account/settings/': typeof AuthenticatedOwnerAccountSettingsIndexRoute;
-}
-
-export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath;
-  fullPaths:
-    | ''
-    | '/auth'
-    | '/$owner'
-    | '/auth/reset-password'
-    | '/auth/signin'
-    | '/auth/signup'
-    | '/'
-    | '/$owner/$model'
-    | '/$owner/settings'
-    | '/$owner/design'
-    | '/$owner/'
-    | '/$owner/$model/new'
-    | '/$owner/account/settings'
-    | '/$owner/settings/access'
-    | '/$owner/settings/subscription'
-    | '/$owner/design/forms'
-    | '/$owner/design/tables'
-    | '/$owner/design/typography'
-    | '/$owner/$model/'
-    | '/$owner/settings/'
-    | '/$owner/design/'
-    | '/$owner/$model/$id/edit'
-    | '/$owner/account/settings/password'
-    | '/$owner/$model/$id'
-    | '/$owner/account/settings/';
-  fileRoutesByTo: FileRoutesByTo;
-  to:
-    | '/auth'
-    | '/auth/reset-password'
-    | '/auth/signin'
-    | '/auth/signup'
-    | '/'
-    | '/$owner'
-    | '/$owner/$model/new'
-    | '/$owner/settings/access'
-    | '/$owner/settings/subscription'
-    | '/$owner/design/forms'
-    | '/$owner/design/tables'
-    | '/$owner/design/typography'
-    | '/$owner/$model'
-    | '/$owner/settings'
-    | '/$owner/design'
-    | '/$owner/$model/$id/edit'
-    | '/$owner/account/settings/password'
-    | '/$owner/$model/$id'
-    | '/$owner/account/settings';
-  id:
-    | '__root__'
-    | '/_authenticated'
-    | '/auth'
-    | '/_authenticated/$owner'
-    | '/auth/reset-password'
-    | '/auth/signin'
-    | '/auth/signup'
-    | '/_authenticated/'
-    | '/_authenticated/$owner/$model'
-    | '/_authenticated/$owner/settings'
-    | '/_authenticated/$owner/design'
-    | '/_authenticated/$owner/'
-    | '/_authenticated/$owner/$model/new'
-    | '/_authenticated/$owner/account/settings'
-    | '/_authenticated/$owner/settings/access'
-    | '/_authenticated/$owner/settings/subscription'
-    | '/_authenticated/$owner/design/forms'
-    | '/_authenticated/$owner/design/tables'
-    | '/_authenticated/$owner/design/typography'
-    | '/_authenticated/$owner/$model/'
-    | '/_authenticated/$owner/settings/'
-    | '/_authenticated/$owner/design/'
-    | '/_authenticated/$owner/$model/$id/edit'
-    | '/_authenticated/$owner/account/settings/password'
-    | '/_authenticated/$owner/$model/$id/'
-    | '/_authenticated/$owner/account/settings/';
-  fileRoutesById: FileRoutesById;
-}
-
-export interface RootRouteChildren {
-  AuthenticatedRoute: typeof AuthenticatedRouteWithChildren;
-  AuthRoute: typeof AuthRouteWithChildren;
-}
-
 const rootRouteChildren: RootRouteChildren = {
   AuthenticatedRoute: AuthenticatedRouteWithChildren,
-  AuthRoute: AuthRouteWithChildren
+  PrototypeRoute: PrototypeRouteWithChildren,
+  AuthRoute: AuthRouteWithChildren,
 };
-
-export const routeTree = rootRoute
+export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>();
-
-/* ROUTE_MANIFEST_START
-{
-  "routes": {
-    "__root__": {
-      "filePath": "__root.tsx",
-      "children": [
-        "/_authenticated",
-        "/auth"
-      ]
-    },
-    "/_authenticated": {
-      "filePath": "_authenticated.tsx",
-      "children": [
-        "/_authenticated/$owner",
-        "/_authenticated/"
-      ]
-    },
-    "/auth": {
-      "filePath": "auth.tsx",
-      "children": [
-        "/auth/reset-password",
-        "/auth/signin",
-        "/auth/signup"
-      ]
-    },
-    "/_authenticated/$owner": {
-      "filePath": "_authenticated/$owner.tsx",
-      "parent": "/_authenticated",
-      "children": [
-        "/_authenticated/$owner/$model",
-        "/_authenticated/$owner/settings",
-        "/_authenticated/$owner/design",
-        "/_authenticated/$owner/",
-        "/_authenticated/$owner/account/settings"
-      ]
-    },
-    "/auth/reset-password": {
-      "filePath": "auth/reset-password.tsx",
-      "parent": "/auth"
-    },
-    "/auth/signin": {
-      "filePath": "auth/signin.tsx",
-      "parent": "/auth"
-    },
-    "/auth/signup": {
-      "filePath": "auth/signup.tsx",
-      "parent": "/auth"
-    },
-    "/_authenticated/": {
-      "filePath": "_authenticated/index.tsx",
-      "parent": "/_authenticated"
-    },
-    "/_authenticated/$owner/$model": {
-      "filePath": "_authenticated/$owner/$model.tsx",
-      "parent": "/_authenticated/$owner",
-      "children": [
-        "/_authenticated/$owner/$model/new",
-        "/_authenticated/$owner/$model/",
-        "/_authenticated/$owner/$model/$id/edit",
-        "/_authenticated/$owner/$model/$id/"
-      ]
-    },
-    "/_authenticated/$owner/settings": {
-      "filePath": "_authenticated/$owner/settings.tsx",
-      "parent": "/_authenticated/$owner",
-      "children": [
-        "/_authenticated/$owner/settings/access",
-        "/_authenticated/$owner/settings/subscription",
-        "/_authenticated/$owner/settings/"
-      ]
-    },
-    "/_authenticated/$owner/design": {
-      "filePath": "_authenticated/$owner/design.lazy.tsx",
-      "parent": "/_authenticated/$owner",
-      "children": [
-        "/_authenticated/$owner/design/forms",
-        "/_authenticated/$owner/design/tables",
-        "/_authenticated/$owner/design/typography",
-        "/_authenticated/$owner/design/"
-      ]
-    },
-    "/_authenticated/$owner/": {
-      "filePath": "_authenticated/$owner/index.tsx",
-      "parent": "/_authenticated/$owner"
-    },
-    "/_authenticated/$owner/$model/new": {
-      "filePath": "_authenticated/$owner/$model/new.tsx",
-      "parent": "/_authenticated/$owner/$model"
-    },
-    "/_authenticated/$owner/account/settings": {
-      "filePath": "_authenticated/$owner/account/settings.tsx",
-      "parent": "/_authenticated/$owner",
-      "children": [
-        "/_authenticated/$owner/account/settings/password",
-        "/_authenticated/$owner/account/settings/"
-      ]
-    },
-    "/_authenticated/$owner/settings/access": {
-      "filePath": "_authenticated/$owner/settings/access.tsx",
-      "parent": "/_authenticated/$owner/settings"
-    },
-    "/_authenticated/$owner/settings/subscription": {
-      "filePath": "_authenticated/$owner/settings/subscription.tsx",
-      "parent": "/_authenticated/$owner/settings"
-    },
-    "/_authenticated/$owner/design/forms": {
-      "filePath": "_authenticated/$owner/design/forms.lazy.tsx",
-      "parent": "/_authenticated/$owner/design"
-    },
-    "/_authenticated/$owner/design/tables": {
-      "filePath": "_authenticated/$owner/design/tables.lazy.tsx",
-      "parent": "/_authenticated/$owner/design"
-    },
-    "/_authenticated/$owner/design/typography": {
-      "filePath": "_authenticated/$owner/design/typography.lazy.tsx",
-      "parent": "/_authenticated/$owner/design"
-    },
-    "/_authenticated/$owner/$model/": {
-      "filePath": "_authenticated/$owner/$model/index.tsx",
-      "parent": "/_authenticated/$owner/$model"
-    },
-    "/_authenticated/$owner/settings/": {
-      "filePath": "_authenticated/$owner/settings/index.tsx",
-      "parent": "/_authenticated/$owner/settings"
-    },
-    "/_authenticated/$owner/design/": {
-      "filePath": "_authenticated/$owner/design/index.lazy.tsx",
-      "parent": "/_authenticated/$owner/design"
-    },
-    "/_authenticated/$owner/$model/$id/edit": {
-      "filePath": "_authenticated/$owner/$model/$id.edit.tsx",
-      "parent": "/_authenticated/$owner/$model"
-    },
-    "/_authenticated/$owner/account/settings/password": {
-      "filePath": "_authenticated/$owner/account/settings/password.tsx",
-      "parent": "/_authenticated/$owner/account/settings"
-    },
-    "/_authenticated/$owner/$model/$id/": {
-      "filePath": "_authenticated/$owner/$model/$id.index.tsx",
-      "parent": "/_authenticated/$owner/$model"
-    },
-    "/_authenticated/$owner/account/settings/": {
-      "filePath": "_authenticated/$owner/account/settings/index.tsx",
-      "parent": "/_authenticated/$owner/account/settings"
-    }
-  }
-}
-ROUTE_MANIFEST_END */

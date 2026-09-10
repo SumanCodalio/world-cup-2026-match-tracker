@@ -1,0 +1,1850 @@
+{
+  "pages": [
+    {
+      "name": "Landing",
+      "route": "/",
+      "locked": false,
+      "sections": [
+        {
+          "title": null,
+          "spacing": "spacious",
+          "image_urls": null,
+          "section_type": "hero",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "HeroBanner",
+              "props": {
+                "headline": "Track Every Moment of World Cup 2026",
+                "primary_cta": {
+                  "label": "View Schedule",
+                  "route": "/schedule"
+                },
+                "subheadline": "Live schedules, real-time scores, and AI-powered match probabilities in one place.",
+                "secondary_cta": {
+                  "label": "Explore Probabilities",
+                  "route": "/probabilities"
+                }
+              },
+              "styling": {
+                "headline": "text-3xl md:text-5xl font-bold",
+                "container": "rounded-xl bg-gradient-to-r from-primary to-accent p-8 text-primary-foreground",
+                "subheadline": "mt-3 text-base md:text-lg opacity-95"
+              },
+              "has_state": false,
+              "image_urls": [
+                "https://pixabay.com/get/g0dfecb58050805a4ab5f6975148b276fb8f66f0a138e2c7f43cd59622e459e2bfc9682ce3cd7667a9951373a6112be84c3f270049f1df3ed1352b16f2819f8b2_640.jpg",
+                "https://pixabay.com/get/g12906f9c32a70a930707ebe5e20945374708b70d14e62ac8847bb0883e356b3fb75994dbc6eba767033f63e8ee844b3cb0e7c87146db982fb056c3380ef02203_640.jpg",
+                "https://pixabay.com/get/g8e062e0d77f38d1a62ebafd221ca91ab3faf66e487e1e02fdd8fe4977e64f87c74b231e85beefb22d0a0e24b3e319f36d84fa40a9447dd68a15020baa9459c36_640.jpg",
+                "https://pixabay.com/get/gbce95a71a60e2bc08b4cd5ec2ecff4d049bd68a11153eba412f36699830ea1f4a71baa63f937dbd584667e681184344c1cc4b1a65ccb61c776d693de6d548397_640.jpg",
+                "https://pixabay.com/get/g58cd43371e4b490f3ff6632d1bb3bd9d56249d3b15bbef6b5cbc3953ecf97471d68f2d22ea284ff431e30e16e01b36bb3030e1393270621a69c63ed4d6d25eff_640.jpg",
+                "https://pixabay.com/get/g1a46ab0f42e5ee0b79195472630c81b59980cd587f00b697f73595ae30ddf9325ce7afc80e257cc5586a88cbaeba336b_640.jpg",
+                "https://pixabay.com/get/gfd7924ca541dbac17ad86995da4a9eacec572dd511b53b6164b69b78e66e8dd5d4cb4418f9ff28615447f2b14bc4659e_640.jpg",
+                "https://pixabay.com/get/g4c7b530a2c89f1bfdc114664bcd1fcc22d60c3e4dc2e03e995c8103273445e7285ef9aafe55b3710ae095b53eed5f18131ca27e42f6e36b221f7579bcb327a84_640.jpg",
+                "https://pixabay.com/get/g3e980d16233831fd04e213106f1e3c3825faef3e97710dc9e39301e77bbf7f692e5ac692e9fa500463345a433570865c_640.jpg",
+                "https://pixabay.com/get/gfdcf5cc8f6c5fccf48ee2f796d13492bb088e8b5b678d451263de06cf306b0569b91c6d3cdd517baf9560e1c1746302b_640.jpg",
+                "https://pixabay.com/get/gb4a98d66c5e6f8995dbc737be8be9aca48b8f58b231d7a4d82bec38b916a8db286d5cc5037a565ef75d2a12d1b16280c600920ad0ac981e725d12362c4e2c859_640.jpg",
+                "https://pixabay.com/get/g4297e34976195df56b0cf790f0d9a5dfe04ee7e579177586344e01056ab12844d525894f3ddb2817891edb868d8ab6e9e54e5d002f2adfd114453526694c6109_640.jpg",
+                "https://pixabay.com/get/g4d09202f630192787633f3281934098f4332c6f1063cf85f8b1d7192994c5a2f4c635b5f1cefebdcc8d640e88359991a3cb836fc333141dcc24426559c97c001_640.jpg",
+                "https://pixabay.com/get/gb467df067899f19d85c9e54b8abd25aef615251de3f14779fc762be9e024a45fcdd1a5b382b1b893a7b298a21cbec8f8d76ed2f463b64e488a4b772a33b345ee_640.jpg",
+                "https://pixabay.com/get/g14a82a5d8ede628247abbc5c135922fefe28cce878e30f3fa986d167f70719ce3c45d79d4b342be100300a467b35b9a7_640.jpg",
+                "https://pixabay.com/get/g7c00137e3cb8c051204072ec34c243c2a84a343324b5edd896ba169b2ad88be9aa00d382d45de1f4d32cf70df9522cdbf8fe30c5460e2ffad1dec7ea54148649_640.jpg",
+                "https://pixabay.com/get/gba5717d6d4b86b5dc957187d4b02481422a62dcc0e11c90a6287024d7be016531c7f6eb9e1b17e371758d121b8fbc51d46b1bc39d276d77aa5cd36f9718ea4c7_640.jpg",
+                "https://pixabay.com/get/g4e256a2f84853ac0305a17d3263c7ad4db465a16cfd43d6202e0f6215fc74880377c4834bbb7abeb04e77e11e237c0a5_640.jpg",
+                "https://pixabay.com/get/g33e11c68537baa49b8876c6c24ae67b0db79ca15451be25f95bb6de798c89bd67919af913de253f2830a980c83da43ff61b937cfb39974dc8b78a5762e00e1ed_640.jpg",
+                "https://pixabay.com/get/ga8bb538882d5c6224545e784877248bdfe692f021879a40baec0be78523181755018309c8fe3fba76675181bbf9631b8_640.jpg"
+              ],
+              "data_source": null,
+              "event_handlers": [
+                "onPrimaryClick",
+                "onSecondaryClick"
+              ],
+              "image_keywords": [
+                "stadium"
+              ],
+              "shadcn_components": [
+                "Badge",
+                "Button"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Live Tournament Snapshot",
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "social_proof",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "TournamentStats",
+              "props": {
+                "items": [
+                  {
+                    "label": "Matches Tracked",
+                    "value": "104"
+                  },
+                  {
+                    "label": "Teams",
+                    "value": "48"
+                  },
+                  {
+                    "label": "Live Updates",
+                    "value": "24/7"
+                  }
+                ]
+              },
+              "styling": {
+                "grid": "grid gap-4 md:grid-cols-3"
+              },
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "matches",
+              "event_handlers": null,
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardContent",
+                "Badge"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Everything Fans Need",
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "features",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "FeatureGrid",
+              "props": {
+                "features": [
+                  {
+                    "title": "Real-time Schedule",
+                    "description": "Kick-off times, venues, and status updates as they happen."
+                  },
+                  {
+                    "title": "Win Probabilities",
+                    "description": "Pre-match and live model insights for every fixture."
+                  },
+                  {
+                    "title": "Team Insights",
+                    "description": "Form, squad details, and tournament performance at a glance."
+                  }
+                ]
+              },
+              "styling": {
+                "grid": "grid gap-4 md:grid-cols-3"
+              },
+              "has_state": false,
+              "image_urls": null,
+              "data_source": null,
+              "event_handlers": null,
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardDescription",
+                "CardContent"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "How It Works",
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "how_it_works",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "HowItWorksSteps",
+              "props": {
+                "steps": [
+                  {
+                    "title": "Follow Matches",
+                    "description": "Browse by date, team, or stage in schedule and calendar views."
+                  },
+                  {
+                    "title": "Compare Probabilities",
+                    "description": "See model confidence and scenario outcomes for each game."
+                  },
+                  {
+                    "title": "Personalize Alerts",
+                    "description": "Save favorite teams and receive notification preferences."
+                  }
+                ]
+              },
+              "styling": {
+                "list": "grid gap-4 md:grid-cols-3"
+              },
+              "has_state": false,
+              "image_urls": null,
+              "data_source": null,
+              "event_handlers": null,
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardContent",
+                "Separator"
+              ]
+            }
+          ]
+        },
+        {
+          "title": null,
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "final_cta",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "FinalCtaPanel",
+              "props": {
+                "cta": {
+                  "label": "Go to User Portal",
+                  "route": "/user"
+                },
+                "title": "Never Miss a Matchday",
+                "description": "Create your account and personalize your World Cup tracker."
+              },
+              "styling": {
+                "card": "text-center p-6"
+              },
+              "has_state": false,
+              "image_urls": null,
+              "data_source": null,
+              "event_handlers": [
+                "onCtaClick"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardContent",
+                "Button"
+              ]
+            }
+          ]
+        }
+      ],
+      "display_title": "Home",
+      "required_imports": null,
+      "has_dynamic_params": false
+    },
+    {
+      "name": "Schedule",
+      "route": "/schedule",
+      "locked": false,
+      "sections": [
+        {
+          "title": "Match Schedule",
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "content",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "ScheduleToolbar",
+              "props": {
+                "actions": [
+                  "Today",
+                  "This Week"
+                ],
+                "filters": [
+                  "Date",
+                  "Stage",
+                  "Team",
+                  "Venue"
+                ]
+              },
+              "styling": {
+                "bar": "flex flex-col gap-3 md:flex-row md:items-center"
+              },
+              "has_state": true,
+              "image_urls": null,
+              "data_source": null,
+              "event_handlers": [
+                "onSearchChange",
+                "onFilterChange",
+                "onQuickRangeClick"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Input",
+                "Select",
+                "SelectTrigger",
+                "SelectContent",
+                "SelectItem",
+                "Button"
+              ]
+            },
+            {
+              "name": "ScheduleTable",
+              "props": {
+                "columns": [
+                  "Date",
+                  "Time",
+                  "Match",
+                  "Stage",
+                  "Venue",
+                  "Status"
+                ]
+              },
+              "styling": {
+                "wrapper": "rounded-lg border bg-card p-2"
+              },
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "matches",
+              "event_handlers": [
+                "onRowClick"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Table",
+                "Badge",
+                "Button",
+                "Card"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Calendar View",
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "grid",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "MatchCalendar",
+              "props": {
+                "show_team_filter": true,
+                "show_stage_filter": true,
+                "allow_add_to_calendar": true
+              },
+              "styling": {
+                "container": "rounded-lg border bg-card p-4"
+              },
+              "has_state": true,
+              "image_urls": null,
+              "data_source": "matches",
+              "event_handlers": [
+                "onDateSelect",
+                "onAddToCalendar"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Calendar",
+                "Card",
+                "CardContent",
+                "Button"
+              ]
+            }
+          ]
+        }
+      ],
+      "display_title": null,
+      "required_imports": null,
+      "has_dynamic_params": false
+    },
+    {
+      "name": "ScheduleMatchDetail",
+      "route": "/schedule/:match_id",
+      "locked": false,
+      "sections": [
+        {
+          "title": null,
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "content",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "MatchBreadcrumbHeader",
+              "props": {
+                "back_route": "/schedule"
+              },
+              "styling": {
+                "row": "flex items-center justify-between gap-3"
+              },
+              "has_state": true,
+              "image_urls": null,
+              "data_source": null,
+              "event_handlers": [
+                "onBackClick"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Breadcrumb",
+                "BreadcrumbList",
+                "BreadcrumbItem",
+                "BreadcrumbLink",
+                "BreadcrumbPage",
+                "Button",
+                "Badge"
+              ]
+            },
+            {
+              "name": "MatchOverviewCard",
+              "props": {
+                "fields": [
+                  "kickoff_time",
+                  "venue",
+                  "stage",
+                  "status",
+                  "score"
+                ]
+              },
+              "styling": {
+                "card": "rounded-xl"
+              },
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "matches",
+              "event_handlers": null,
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardDescription",
+                "CardContent",
+                "Badge"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Match Insights",
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "grid",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "LineupAndEvents",
+              "props": {
+                "tabs": [
+                  "Timeline",
+                  "Lineups",
+                  "Stats"
+                ]
+              },
+              "styling": {
+                "tabs": "w-full"
+              },
+              "has_state": true,
+              "image_urls": null,
+              "data_source": null,
+              "event_handlers": [
+                "onTabChange"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Tabs",
+                "TabsList",
+                "TabsTrigger",
+                "TabsContent",
+                "Card",
+                "CardContent"
+              ]
+            },
+            {
+              "name": "RelatedProbabilities",
+              "props": {
+                "title": "Live Outcome Probability",
+                "actions": [
+                  {
+                    "label": "Open Full Probability View",
+                    "route": "/probabilities/:match_id"
+                  }
+                ]
+              },
+              "styling": {},
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "match_probabilities",
+              "event_handlers": [
+                "onNavigateProbability"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardContent",
+                "Progress",
+                "Badge",
+                "Button"
+              ]
+            }
+          ]
+        }
+      ],
+      "display_title": "Match Detail",
+      "required_imports": [
+        "react-router-dom"
+      ],
+      "has_dynamic_params": true
+    },
+    {
+      "name": "Probabilities",
+      "route": "/probabilities",
+      "locked": false,
+      "sections": [
+        {
+          "title": "Match Probability Center",
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "content",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "ProbabilityFilters",
+              "props": {
+                "views": [
+                  "All Matches",
+                  "Group Stage",
+                  "Knockout",
+                  "Live"
+                ]
+              },
+              "styling": {},
+              "has_state": true,
+              "image_urls": null,
+              "data_source": null,
+              "event_handlers": [
+                "onSearchChange",
+                "onFilterChange",
+                "onViewChange"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Input",
+                "Select",
+                "SelectTrigger",
+                "SelectContent",
+                "SelectItem",
+                "Tabs",
+                "TabsList",
+                "TabsTrigger"
+              ]
+            },
+            {
+              "name": "ProbabilityCards",
+              "props": {
+                "show_confidence": true,
+                "show_model_source": true
+              },
+              "styling": {
+                "grid": "grid gap-4 md:grid-cols-2"
+              },
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "match_probabilities",
+              "event_handlers": [
+                "onCardClick"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardDescription",
+                "CardContent",
+                "Progress",
+                "Badge",
+                "Button"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Tournament Winner Odds",
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "grid",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "TournamentPredictionsPanel",
+              "props": {
+                "columns": [
+                  "Team",
+                  "Win %",
+                  "Final %",
+                  "Semi %"
+                ]
+              },
+              "styling": {},
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "tournament_predictions",
+              "event_handlers": null,
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardContent",
+                "Table",
+                "Badge"
+              ]
+            }
+          ]
+        }
+      ],
+      "display_title": null,
+      "required_imports": null,
+      "has_dynamic_params": false
+    },
+    {
+      "name": "ProbabilityMatchDetail",
+      "route": "/probabilities/:match_id",
+      "locked": false,
+      "sections": [
+        {
+          "title": null,
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "content",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "ProbabilityDetailHeader",
+              "props": {
+                "title": "Match Probability Breakdown",
+                "parent_route": "/probabilities"
+              },
+              "styling": {},
+              "has_state": false,
+              "image_urls": null,
+              "data_source": null,
+              "event_handlers": null,
+              "image_keywords": null,
+              "shadcn_components": [
+                "Breadcrumb",
+                "BreadcrumbList",
+                "BreadcrumbItem",
+                "BreadcrumbLink",
+                "BreadcrumbPage",
+                "Badge"
+              ]
+            },
+            {
+              "name": "OutcomeBreakdownCard",
+              "props": {
+                "segments": [
+                  "Home Win",
+                  "Draw",
+                  "Away Win"
+                ],
+                "show_model_version": true
+              },
+              "styling": {},
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "match_probabilities",
+              "event_handlers": null,
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardContent",
+                "Progress",
+                "Separator"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Scenario Analysis",
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "grid",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "ScenarioSimulator",
+              "props": {
+                "controls": [
+                  "Form",
+                  "Injuries",
+                  "Venue Advantage"
+                ]
+              },
+              "styling": {},
+              "has_state": true,
+              "image_urls": null,
+              "data_source": "prediction_models",
+              "event_handlers": [
+                "onScenarioChange",
+                "onRecalculate"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardContent",
+                "Slider",
+                "Button",
+                "Badge"
+              ]
+            },
+            {
+              "name": "HistoricalComparison",
+              "props": {
+                "title": "Recent Similar Fixtures"
+              },
+              "styling": {},
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "matches",
+              "event_handlers": null,
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardContent",
+                "Table"
+              ]
+            }
+          ]
+        }
+      ],
+      "display_title": "Probability Detail",
+      "required_imports": [
+        "react-router-dom"
+      ],
+      "has_dynamic_params": true
+    },
+    {
+      "name": "Teams",
+      "route": "/teams",
+      "locked": false,
+      "sections": [
+        {
+          "title": "National Teams",
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "content",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "TeamDirectoryToolbar",
+              "props": {
+                "filters": [
+                  "Group",
+                  "Confederation",
+                  "Ranking"
+                ]
+              },
+              "styling": {},
+              "has_state": true,
+              "image_urls": null,
+              "data_source": null,
+              "event_handlers": [
+                "onSearchChange",
+                "onFilterChange"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Input",
+                "Select",
+                "SelectTrigger",
+                "SelectContent",
+                "SelectItem",
+                "Button"
+              ]
+            },
+            {
+              "name": "TeamGrid",
+              "props": {
+                "cta_label": "View Team"
+              },
+              "styling": {
+                "grid": "grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+              },
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "teams",
+              "event_handlers": [
+                "onTeamOpen"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardDescription",
+                "CardContent",
+                "Avatar",
+                "Badge",
+                "Button"
+              ]
+            }
+          ]
+        }
+      ],
+      "display_title": null,
+      "required_imports": null,
+      "has_dynamic_params": false
+    },
+    {
+      "name": "TeamDetail",
+      "route": "/teams/:team_id",
+      "locked": false,
+      "sections": [
+        {
+          "title": null,
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "content",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "TeamHeader",
+              "props": {
+                "parent_route": "/teams"
+              },
+              "styling": {},
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "teams",
+              "event_handlers": null,
+              "image_keywords": null,
+              "shadcn_components": [
+                "Breadcrumb",
+                "BreadcrumbList",
+                "BreadcrumbItem",
+                "BreadcrumbLink",
+                "BreadcrumbPage",
+                "Avatar",
+                "Badge"
+              ]
+            },
+            {
+              "name": "TeamStatsCards",
+              "props": {
+                "metrics": [
+                  "FIFA Ranking",
+                  "Group Position",
+                  "Win Probability"
+                ]
+              },
+              "styling": {
+                "grid": "grid gap-4 md:grid-cols-3"
+              },
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "teams",
+              "event_handlers": null,
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardContent",
+                "Progress"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Squad and Fixtures",
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "grid",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "SquadTable",
+              "props": {
+                "columns": [
+                  "Player",
+                  "Position",
+                  "Club",
+                  "Caps"
+                ]
+              },
+              "styling": {},
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "players",
+              "event_handlers": null,
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardContent",
+                "Table"
+              ]
+            },
+            {
+              "name": "UpcomingFixtures",
+              "props": {
+                "cta": {
+                  "label": "Open Match",
+                  "route": "/schedule/:match_id"
+                }
+              },
+              "styling": {},
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "matches",
+              "event_handlers": [
+                "onFixtureClick"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardContent",
+                "Table",
+                "Button"
+              ]
+            }
+          ]
+        }
+      ],
+      "display_title": null,
+      "required_imports": [
+        "react-router-dom"
+      ],
+      "has_dynamic_params": true
+    },
+    {
+      "name": "UserPortal",
+      "route": "/user",
+      "locked": false,
+      "sections": [
+        {
+          "title": null,
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "content",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "UserPortalIntro",
+              "props": {
+                "title": "Your Personalized Match Hub",
+                "description": "Manage favorites, alerts, and account preferences.",
+                "quick_links": [
+                  {
+                    "label": "Dashboard",
+                    "route": "/user/dashboard"
+                  },
+                  {
+                    "label": "Profile",
+                    "route": "/user/profile"
+                  },
+                  {
+                    "label": "Settings",
+                    "route": "/user/settings"
+                  }
+                ]
+              },
+              "styling": {},
+              "has_state": false,
+              "image_urls": null,
+              "data_source": null,
+              "event_handlers": [
+                "onQuickLinkClick"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardDescription",
+                "CardContent",
+                "Button"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Recent Activity",
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "grid",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "FavoriteTeamsPreview",
+              "props": {},
+              "styling": {},
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "favorite_teams",
+              "event_handlers": null,
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardContent",
+                "Badge"
+              ]
+            },
+            {
+              "name": "NotificationsPreview",
+              "props": {
+                "cta": {
+                  "label": "Manage Settings",
+                  "route": "/user/settings"
+                }
+              },
+              "styling": {},
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "notifications",
+              "event_handlers": [
+                "onManageClick"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardContent",
+                "Button"
+              ]
+            }
+          ]
+        }
+      ],
+      "display_title": "User Portal",
+      "required_imports": null,
+      "has_dynamic_params": false
+    },
+    {
+      "name": "UserDashboard",
+      "route": "/user/dashboard",
+      "locked": false,
+      "sections": [
+        {
+          "title": "Dashboard",
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "content",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "DashboardSummary",
+              "props": {
+                "widgets": [
+                  "Upcoming Favorite Team Matches",
+                  "Live Match Alerts",
+                  "Saved Predictions"
+                ]
+              },
+              "styling": {
+                "grid": "grid gap-4 md:grid-cols-3"
+              },
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "matches",
+              "event_handlers": null,
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardContent",
+                "Badge"
+              ]
+            },
+            {
+              "name": "PersonalizedFeed",
+              "props": {
+                "tabs": [
+                  "Highlights",
+                  "News",
+                  "Recommendations"
+                ]
+              },
+              "styling": {},
+              "has_state": true,
+              "image_urls": null,
+              "data_source": "articles",
+              "event_handlers": [
+                "onFeedTabChange"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardContent",
+                "Tabs",
+                "TabsList",
+                "TabsTrigger",
+                "TabsContent"
+              ]
+            }
+          ]
+        }
+      ],
+      "display_title": null,
+      "required_imports": null,
+      "has_dynamic_params": false
+    },
+    {
+      "name": "UserProfile",
+      "route": "/user/profile",
+      "locked": false,
+      "sections": [
+        {
+          "title": "Profile",
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "content",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "ProfileCard",
+              "props": {
+                "editable_fields": [
+                  "name",
+                  "email",
+                  "timezone"
+                ]
+              },
+              "styling": {},
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "users",
+              "event_handlers": [
+                "onEditProfile"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardDescription",
+                "CardContent",
+                "Avatar",
+                "Button"
+              ]
+            },
+            {
+              "name": "FavoriteTeamsManager",
+              "props": {
+                "title": "Favorite Teams"
+              },
+              "styling": {},
+              "has_state": true,
+              "image_urls": null,
+              "data_source": "favorite_teams",
+              "event_handlers": [
+                "onAddFavorite",
+                "onRemoveFavorite"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardContent",
+                "Badge",
+                "Button"
+              ]
+            }
+          ]
+        }
+      ],
+      "display_title": null,
+      "required_imports": null,
+      "has_dynamic_params": false
+    },
+    {
+      "name": "UserSettings",
+      "route": "/user/settings",
+      "locked": false,
+      "sections": [
+        {
+          "title": "Settings",
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "content",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "PreferenceForm",
+              "props": {
+                "settings": [
+                  "Push Notifications",
+                  "Email Alerts",
+                  "Timezone",
+                  "Language"
+                ]
+              },
+              "styling": {},
+              "has_state": true,
+              "image_urls": null,
+              "data_source": "user_preferences",
+              "event_handlers": [
+                "onPreferenceToggle",
+                "onSaveSettings"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardContent",
+                "Switch",
+                "Select",
+                "SelectTrigger",
+                "SelectContent",
+                "SelectItem",
+                "Button"
+              ]
+            },
+            {
+              "name": "SubscriptionPanel",
+              "props": {
+                "actions": [
+                  "Upgrade",
+                  "Cancel",
+                  "Renew"
+                ]
+              },
+              "styling": {},
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "subscriptions",
+              "event_handlers": [
+                "onSubscriptionAction"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardContent",
+                "Badge",
+                "Button"
+              ]
+            }
+          ]
+        }
+      ],
+      "display_title": null,
+      "required_imports": null,
+      "has_dynamic_params": false
+    },
+    {
+      "name": "AdminPortal",
+      "route": "/admin",
+      "locked": false,
+      "sections": [
+        {
+          "title": null,
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "content",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "AdminWelcome",
+              "props": {
+                "title": "Administration Center",
+                "description": "Manage matches, users, and editorial content from one workspace.",
+                "quick_links": [
+                  {
+                    "label": "Admin Dashboard",
+                    "route": "/admin/dashboard"
+                  },
+                  {
+                    "label": "Match Management",
+                    "route": "/admin/matches"
+                  },
+                  {
+                    "label": "User Management",
+                    "route": "/admin/users"
+                  },
+                  {
+                    "label": "Content Management",
+                    "route": "/admin/content"
+                  }
+                ]
+              },
+              "styling": {},
+              "has_state": false,
+              "image_urls": null,
+              "data_source": null,
+              "event_handlers": [
+                "onQuickLinkClick"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardDescription",
+                "CardContent",
+                "Button"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "System Snapshot",
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "grid",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "AdminKpiCards",
+              "props": {
+                "kpis": [
+                  "Matches Today",
+                  "Pending Content Reviews",
+                  "Active Users",
+                  "Model Health"
+                ]
+              },
+              "styling": {
+                "grid": "grid gap-4 md:grid-cols-4"
+              },
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "system_configurations",
+              "event_handlers": null,
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardContent",
+                "Badge"
+              ]
+            }
+          ]
+        }
+      ],
+      "display_title": "Admin Portal",
+      "required_imports": null,
+      "has_dynamic_params": false
+    },
+    {
+      "name": "AdminDashboard",
+      "route": "/admin/dashboard",
+      "locked": false,
+      "sections": [
+        {
+          "title": "Admin Dashboard",
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "content",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "OperationsOverview",
+              "props": {
+                "panels": [
+                  "Live Match Status",
+                  "Data Sync Health",
+                  "Prediction Model Status"
+                ]
+              },
+              "styling": {},
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "matches",
+              "event_handlers": null,
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardContent",
+                "Table",
+                "Badge"
+              ]
+            },
+            {
+              "name": "AdminActions",
+              "props": {
+                "actions": [
+                  "Add Match",
+                  "Publish Update",
+                  "Run Model Recheck"
+                ]
+              },
+              "styling": {},
+              "has_state": false,
+              "image_urls": null,
+              "data_source": null,
+              "event_handlers": [
+                "onActionClick"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardHeader",
+                "CardTitle",
+                "CardContent",
+                "Button"
+              ]
+            }
+          ]
+        }
+      ],
+      "display_title": null,
+      "required_imports": null,
+      "has_dynamic_params": false
+    },
+    {
+      "name": "AdminMatches",
+      "route": "/admin/matches",
+      "locked": false,
+      "sections": [
+        {
+          "title": "Match Management",
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "content",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "AdminMatchFilters",
+              "props": {
+                "tabs": [
+                  "All Matches",
+                  "Upcoming",
+                  "Completed",
+                  "Add New Match"
+                ]
+              },
+              "styling": {},
+              "has_state": true,
+              "image_urls": null,
+              "data_source": null,
+              "event_handlers": [
+                "onSearchChange",
+                "onFilterChange",
+                "onTabChange",
+                "onAddMatch"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Input",
+                "Select",
+                "SelectTrigger",
+                "SelectContent",
+                "SelectItem",
+                "Tabs",
+                "TabsList",
+                "TabsTrigger",
+                "Button"
+              ]
+            },
+            {
+              "name": "AdminMatchesTable",
+              "props": {
+                "columns": [
+                  "Match",
+                  "Date",
+                  "Venue",
+                  "Status",
+                  "Last Updated"
+                ]
+              },
+              "styling": {},
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "matches",
+              "event_handlers": [
+                "onEditMatch",
+                "onDeleteMatch",
+                "onPublishMatch"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardContent",
+                "Table",
+                "Badge",
+                "Button",
+                "DropdownMenu",
+                "DropdownMenuTrigger",
+                "DropdownMenuContent",
+                "DropdownMenuItem"
+              ]
+            }
+          ]
+        }
+      ],
+      "display_title": null,
+      "required_imports": null,
+      "has_dynamic_params": false
+    },
+    {
+      "name": "AdminUsers",
+      "route": "/admin/users",
+      "locked": false,
+      "sections": [
+        {
+          "title": "User Management",
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "content",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "AdminUserSearch",
+              "props": {
+                "filters": [
+                  "Role",
+                  "Status",
+                  "Subscription"
+                ]
+              },
+              "styling": {},
+              "has_state": true,
+              "image_urls": null,
+              "data_source": null,
+              "event_handlers": [
+                "onSearchChange",
+                "onFilterChange"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Input",
+                "Select",
+                "SelectTrigger",
+                "SelectContent",
+                "SelectItem",
+                "Button"
+              ]
+            },
+            {
+              "name": "AdminUsersTable",
+              "props": {
+                "columns": [
+                  "User",
+                  "Email",
+                  "Role",
+                  "Status",
+                  "Created At"
+                ]
+              },
+              "styling": {},
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "users",
+              "event_handlers": [
+                "onViewUser",
+                "onSuspendUser",
+                "onResetPassword"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardContent",
+                "Table",
+                "Avatar",
+                "Badge",
+                "Button",
+                "DropdownMenu",
+                "DropdownMenuTrigger",
+                "DropdownMenuContent",
+                "DropdownMenuItem"
+              ]
+            }
+          ]
+        }
+      ],
+      "display_title": null,
+      "required_imports": null,
+      "has_dynamic_params": false
+    },
+    {
+      "name": "AdminContent",
+      "route": "/admin/content",
+      "locked": false,
+      "sections": [
+        {
+          "title": "Content Management",
+          "spacing": "normal",
+          "image_urls": null,
+          "section_type": "content",
+          "image_keywords": null,
+          "component_specs": [
+            {
+              "name": "ContentToolbar",
+              "props": {
+                "filters": [
+                  "Type",
+                  "Status",
+                  "Author"
+                ]
+              },
+              "styling": {},
+              "has_state": true,
+              "image_urls": null,
+              "data_source": null,
+              "event_handlers": [
+                "onSearchChange",
+                "onFilterChange",
+                "onCreateContent"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Input",
+                "Select",
+                "SelectTrigger",
+                "SelectContent",
+                "SelectItem",
+                "Button"
+              ]
+            },
+            {
+              "name": "ContentTable",
+              "props": {
+                "columns": [
+                  "Title",
+                  "Category",
+                  "Status",
+                  "Updated"
+                ]
+              },
+              "styling": {},
+              "has_state": false,
+              "image_urls": null,
+              "data_source": "articles",
+              "event_handlers": [
+                "onEditContent",
+                "onPublishContent",
+                "onArchiveContent"
+              ],
+              "image_keywords": null,
+              "shadcn_components": [
+                "Card",
+                "CardContent",
+                "Table",
+                "Badge",
+                "Button",
+                "DropdownMenu",
+                "DropdownMenuTrigger",
+                "DropdownMenuContent",
+                "DropdownMenuItem"
+              ]
+            }
+          ]
+        }
+      ],
+      "display_title": null,
+      "required_imports": null,
+      "has_dynamic_params": false
+    }
+  ],
+  "layout": {
+    "name": "Layout",
+    "props": {
+      "header": {
+        "show_search": true,
+        "show_breadcrumbs": true,
+        "show_theme_toggle": true
+      },
+      "logo_icon": "Trophy",
+      "project_name": "World Cup 2026 Match Tracker",
+      "navigation_links": [
+        {
+          "label": "Home",
+          "route": "/"
+        },
+        {
+          "label": "Schedule",
+          "route": "/schedule"
+        },
+        {
+          "label": "Probabilities",
+          "route": "/probabilities"
+        },
+        {
+          "label": "Teams",
+          "route": "/teams"
+        },
+        {
+          "label": "User",
+          "route": "/user"
+        },
+        {
+          "label": "Admin",
+          "route": "/admin"
+        }
+      ],
+      "mobile_navigation": "sheet",
+      "shared_components": {
+        "footer": "GlobalFooter",
+        "header": "GlobalHeader"
+      },
+      "sidebar_collapsible": true
+    },
+    "styling": {
+      "main": "p-4 md:p-6",
+      "shell": "min-h-screen bg-background text-foreground",
+      "header": "sticky top-0 z-30 border-b bg-background/95 backdrop-blur",
+      "sidebar": "border-r bg-card"
+    },
+    "has_state": true,
+    "image_urls": null,
+    "data_source": null,
+    "event_handlers": [
+      "onNavItemClick",
+      "onSidebarToggle",
+      "onMobileMenuToggle"
+    ],
+    "image_keywords": null,
+    "shadcn_components": [
+      "Sheet",
+      "Button",
+      "Separator",
+      "Breadcrumb"
+    ]
+  },
+  "design_notes": null,
+  "project_name": "World Cup 2026 Match Tracker",
+  "design_tokens": {
+    "dark": {
+      "card": "#111A2E",
+      "ring": "#60A5FA",
+      "input": "#24324D",
+      "muted": "#17233A",
+      "accent": "#22C55E",
+      "border": "#24324D",
+      "radius": "0.75rem",
+      "primary": "#3B82F6",
+      "secondary": "#1D2940",
+      "background": "#0B1220",
+      "foreground": "#E5EAF3",
+      "destructive": "#EF4444",
+      "card_foreground": "#E5EAF3",
+      "muted_foreground": "#94A3B8",
+      "accent_foreground": "#052E16",
+      "primary_foreground": "#F8FAFC",
+      "secondary_foreground": "#D6DEEB",
+      "destructive_foreground": "#FFFFFF"
+    },
+    "light": {
+      "card": "#FFFFFF",
+      "ring": "#0B63F6",
+      "input": "#D7DFEA",
+      "muted": "#EEF2F7",
+      "accent": "#16A34A",
+      "border": "#D7DFEA",
+      "radius": "0.75rem",
+      "primary": "#0B63F6",
+      "secondary": "#E8EEF9",
+      "background": "#F7F8FA",
+      "foreground": "#0F172A",
+      "destructive": "#DC2626",
+      "card_foreground": "#0F172A",
+      "muted_foreground": "#475569",
+      "accent_foreground": "#FFFFFF",
+      "primary_foreground": "#FFFFFF",
+      "secondary_foreground": "#1E293B",
+      "destructive_foreground": "#FFFFFF"
+    },
+    "gradients": [
+      {
+        "key": "hero",
+        "value": "linear-gradient(135deg, #0B63F6 0%, #16A34A 100%)"
+      },
+      {
+        "key": "darkHero",
+        "value": "linear-gradient(135deg, #1D4ED8 0%, #15803D 100%)"
+      }
+    ]
+  },
+  "layout_archetype": "dashboard",
+  "shared_components": [
+    {
+      "name": "GlobalHeader",
+      "props": {
+        "show_search": true,
+        "show_theme_toggle": true,
+        "show_notifications": true
+      },
+      "styling": {
+        "container": "flex items-center justify-between gap-3 border-b bg-background/95 px-4 py-3 backdrop-blur"
+      },
+      "has_state": true,
+      "image_urls": null,
+      "data_source": null,
+      "event_handlers": [
+        "onSearchChange",
+        "onNotificationClick",
+        "onThemeToggle"
+      ],
+      "image_keywords": null,
+      "shadcn_components": [
+        "Button",
+        "Input",
+        "Badge"
+      ]
+    },
+    {
+      "name": "GlobalFooter",
+      "props": {
+        "columns": [
+          {
+            "links": [
+              "Schedule",
+              "Probabilities",
+              "Teams"
+            ],
+            "title": "Platform"
+          },
+          {
+            "links": [
+              "User Portal",
+              "Admin Portal"
+            ],
+            "title": "Portals"
+          },
+          {
+            "links": [
+              "Privacy",
+              "Terms"
+            ],
+            "title": "Legal"
+          }
+        ],
+        "copyright": "\u00a9 2026 World Cup Match Tracker"
+      },
+      "styling": {
+        "container": "mt-10 border-t bg-card px-4 py-6 text-sm text-muted-foreground"
+      },
+      "has_state": false,
+      "image_urls": null,
+      "data_source": null,
+      "event_handlers": [
+        "onFooterLinkClick"
+      ],
+      "image_keywords": null,
+      "shadcn_components": [
+        "Separator",
+        "Button"
+      ]
+    }
+  ]
+}

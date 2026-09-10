@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_06_09_191230) do
+ActiveRecord::Schema[8.0].define(version: 2026_07_31_055546) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -168,12 +168,17 @@ ActiveRecord::Schema[8.0].define(version: 2026_06_09_191230) do
   end
 
   create_table "players", force: :cascade do |t|
-    t.bigint "team_id", null: false
+    t.bigint "team_id"
     t.string "name", null: false
     t.string "position", null: false
-    t.integer "jersey_number", null: false
+    t.integer "jersey_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "surname"
+    t.string "nationality"
+    t.string "club"
+    t.bigint "organization_id"
+    t.index ["organization_id"], name: "index_players_on_organization_id"
     t.index ["team_id"], name: "index_players_on_team_id"
   end
 
@@ -477,6 +482,7 @@ ActiveRecord::Schema[8.0].define(version: 2026_06_09_191230) do
   add_foreign_key "match_teams", "matches"
   add_foreign_key "match_teams", "teams"
   add_foreign_key "matches", "venues"
+  add_foreign_key "players", "organizations"
   add_foreign_key "players", "teams"
   add_foreign_key "prediction_models", "organizations"
   add_foreign_key "solid_queue_blocked_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
